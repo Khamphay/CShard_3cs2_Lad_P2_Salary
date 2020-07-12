@@ -9,10 +9,20 @@ namespace CShard_3cs2_Lad_P2_Salary
 {
     class KeyBord
     {
-        static InputLanguage eng, lao;
-        public static getKeyBord()
+       public static InputLanguage eng, lao;
+        public static void  getKeyBord()
         {
-            
+            foreach(InputLanguage l in InputLanguage.InstalledInputLanguages)
+            {
+                if (l.LayoutName.Contains("ENG"))
+                {
+                    eng = l;
+                }
+                else if(l.LayoutName.Contains("Lao"))
+                {
+                    lao = l;
+                }
+            }
         }
     }
 }

@@ -15,12 +15,12 @@ namespace CShard_3cs2_Lad_P2_Salary
         {
             try
             {
-                String path = "Data Source=DELL-INSPIRON-1;Initial Catalog=db_Salary;User ID=Khamphay;Password=1234";
-                connect.ConnectionString = path;
+                String path = @"Data Source=DELL-INSPIRON-1\SQLEXPRESS;Initial Catalog=dbSalary;User ID=Khamphay;Password=1234";
                 if (connect.State==ConnectionState.Open)
                 {
                     connect.Close();
                 }
+                connect.ConnectionString = path;
                 connect.Open();
                 return connect;
             }

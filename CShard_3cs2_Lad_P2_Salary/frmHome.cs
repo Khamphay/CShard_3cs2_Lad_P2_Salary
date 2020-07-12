@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,31 @@ namespace CShard_3cs2_Lad_P2_Salary
             InitializeComponent();
         }
 
+        SqlConnection con = MyConnect.Connected();
+        SqlDataAdapter da;
+        DataSet ds;
+
+        string[] col = { "ລະຫັດ", "ຊື່(ພາສາລາວ)", "ນາມສະກຸນ(ພາສາລາວ)", "ຊື່(ພາສາອັງກິດ)", "ນາມສະກຸນ(ພາສາອັງກິດ)", "ເພດ", "ສະຖານະ", "ວ.ດ.ປ ເກີດ", "ບ້ານ", "ເມືອງ", "ແຂວງ", "ເບີໂທ", "Email", "Facbook", "ລະດັບການສຶກ(ພາສາອັງກິດ)", "ລະດັບການສຶກ(ພາສາລາວ)", "ຕຳແໜ່ງ(ພາສາອັງກິດ)", "ຕຳແໜ່ງ(ພາສາລາວ)", "ພະແນກ"};
+        private void ShowData()
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select * From vw_Staff", con);
+                ds = new DataSet();
+                da.Fill(ds, "st");
+                dgvStaff.DataSource = ds.Tables["st"];
+                for(int c=0; c < col.Length; c++)
+                {
+                    dgvStaff.Columns[c].HeaderText = col[c];
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         private void button7_Click(object sender, EventArgs e)
         {
             
@@ -25,10 +51,6 @@ namespace CShard_3cs2_Lad_P2_Salary
             {
                 Application.ExitThread();
             }
-
-
-
-
             else
             {
 
@@ -70,8 +92,31 @@ namespace CShard_3cs2_Lad_P2_Salary
 
         private void qualificationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAualiaction adpli = new frmAualiaction();
+            frmQualification adpli = new frmQualification();
             adpli.Show();
+        }
+
+        private void createAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCreateUser createuser = new frmCreateUser();
+            createuser.Show();
+        }
+
+        private void checkInOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCheck_In_Out check_In_Out = new frmCheck_In_Out();
+            check_In_Out.Show();
+        }
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+            ShowData();
+        }
+
+        private void basicSaralyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BasicSalary salary = new BasicSalary();
+            salary.Show();
         }
     }
 }

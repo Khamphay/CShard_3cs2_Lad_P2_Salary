@@ -1,6 +1,6 @@
 ﻿namespace CShard_3cs2_Lad_P2_Salary
 {
-    partial class frmDept
+    partial class frmQualification
     {
         /// <summary>
         /// Required designer variable.
@@ -28,116 +28,149 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDept));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQualification));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbNameEngQ = new System.Windows.Forms.ComboBox();
+            this.cmbNameLaoQ = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.dgvQualification = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.dgvDepartment = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.btPrint = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQualification)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDepartment)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbNameEngQ);
+            this.groupBox1.Controls.Add(this.cmbNameLaoQ);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.txtID);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(23, 88);
+            this.groupBox1.Location = new System.Drawing.Point(41, 98);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(390, 244);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.Size = new System.Drawing.Size(342, 219);
+            this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Department";
+            // 
+            // cmbNameEngQ
+            // 
+            this.cmbNameEngQ.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNameEngQ.FormattingEnabled = true;
+            this.cmbNameEngQ.Items.AddRange(new object[] {
+            "Aministative",
+            "IT",
+            "Design",
+            "Financial"});
+            this.cmbNameEngQ.Location = new System.Drawing.Point(34, 111);
+            this.cmbNameEngQ.Name = "cmbNameEngQ";
+            this.cmbNameEngQ.Size = new System.Drawing.Size(277, 36);
+            this.cmbNameEngQ.TabIndex = 10;
+            this.cmbNameEngQ.SelectedIndexChanged += new System.EventHandler(this.cmbNameEng_SelectedIndexChanged);
+            // 
+            // cmbNameLaoQ
+            // 
+            this.cmbNameLaoQ.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNameLaoQ.FormattingEnabled = true;
+            this.cmbNameLaoQ.Items.AddRange(new object[] {
+            "ການບໍລີຫານ",
+            "ໄອທີ",
+            "ອອແບບ",
+            "ການເງີນ"});
+            this.cmbNameLaoQ.Location = new System.Drawing.Point(34, 177);
+            this.cmbNameLaoQ.Name = "cmbNameLaoQ";
+            this.cmbNameLaoQ.Size = new System.Drawing.Size(277, 36);
+            this.cmbNameLaoQ.TabIndex = 9;
+            this.cmbNameLaoQ.SelectedIndexChanged += new System.EventHandler(this.cmbNameLao_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(34, 153);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 28);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Qualification lao";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 132);
+            this.label2.Location = new System.Drawing.Point(34, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 28);
+            this.label2.Size = new System.Drawing.Size(153, 28);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Department Name of English";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 28);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Department ID";
-            // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(53, 160);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(277, 36);
-            this.txtName.TabIndex = 1;
-            this.txtName.Enter += new System.EventHandler(this.txtID_Enter);
-            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtID_KeyDown);
+            this.label2.Text = "Qualification English";
             // 
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(53, 88);
+            this.txtID.Location = new System.Drawing.Point(34, 50);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(277, 36);
             this.txtID.TabIndex = 0;
             this.txtID.Enter += new System.EventHandler(this.txtID_Enter);
-            this.txtID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtID_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(34, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 28);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Qualification ID";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.btPrint);
+            this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(421, 88);
+            this.groupBox2.Location = new System.Drawing.Point(401, 98);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(135, 244);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.Size = new System.Drawing.Size(263, 219);
+            this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add Department";
             // 
             // button7
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(518, 3);
+            this.button7.Location = new System.Drawing.Point(641, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(59, 38);
+            this.button7.Size = new System.Drawing.Size(56, 38);
             this.button7.TabIndex = 9;
             this.button7.Text = "Exit";
             this.button7.UseVisualStyleBackColor = true;
@@ -145,14 +178,13 @@
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(148)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(27, 38);
+            this.button2.Location = new System.Drawing.Point(14, 50);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 32);
+            this.button2.Size = new System.Drawing.Size(95, 38);
             this.button2.TabIndex = 8;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
@@ -160,14 +192,13 @@
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(148)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(27, 87);
+            this.button3.Location = new System.Drawing.Point(14, 132);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 32);
+            this.button3.Size = new System.Drawing.Size(95, 38);
             this.button3.TabIndex = 7;
             this.button3.Text = "Edit";
             this.button3.UseVisualStyleBackColor = true;
@@ -175,162 +206,163 @@
             // 
             // button4
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(148)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(27, 140);
+            this.button4.Location = new System.Drawing.Point(152, 50);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 32);
+            this.button4.Size = new System.Drawing.Size(95, 38);
             this.button4.TabIndex = 6;
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // dgvQualification
+            // 
+            this.dgvQualification.AllowUserToAddRows = false;
+            this.dgvQualification.AllowUserToDeleteRows = false;
+            this.dgvQualification.AllowUserToResizeColumns = false;
+            this.dgvQualification.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvQualification.ColumnHeadersHeight = 35;
+            this.dgvQualification.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvQualification.Location = new System.Drawing.Point(41, 324);
+            this.dgvQualification.Name = "dgvQualification";
+            this.dgvQualification.ReadOnly = true;
+            this.dgvQualification.RowHeadersWidth = 5;
+            this.dgvQualification.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvQualification.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvQualification.RowTemplate.Height = 30;
+            this.dgvQualification.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvQualification.Size = new System.Drawing.Size(623, 254);
+            this.dgvQualification.TabIndex = 15;
+            this.dgvQualification.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQualification_CellDoubleClick);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lao_Ketmany2", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(269, 22);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(308, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 37);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Department";
+            this.label3.Size = new System.Drawing.Size(146, 37);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Qualification";
             // 
             // gunaCirclePictureBox1
             // 
             this.gunaCirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.Transparent;
             this.gunaCirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaCirclePictureBox1.Image")));
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(1, 2);
             this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
             this.gunaCirclePictureBox1.Size = new System.Drawing.Size(80, 80);
             this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox1.TabIndex = 3;
+            this.gunaCirclePictureBox1.TabIndex = 14;
             this.gunaCirclePictureBox1.TabStop = false;
             this.gunaCirclePictureBox1.UseTransfarantBackground = true;
-            // 
-            // dgvDepartment
-            // 
-            this.dgvDepartment.AllowUserToAddRows = false;
-            this.dgvDepartment.AllowUserToDeleteRows = false;
-            this.dgvDepartment.AllowUserToResizeColumns = false;
-            this.dgvDepartment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvDepartment.ColumnHeadersHeight = 35;
-            this.dgvDepartment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvDepartment.Location = new System.Drawing.Point(23, 339);
-            this.dgvDepartment.Name = "dgvDepartment";
-            this.dgvDepartment.ReadOnly = true;
-            this.dgvDepartment.RowHeadersWidth = 5;
-            this.dgvDepartment.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvDepartment.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDepartment.RowTemplate.Height = 30;
-            this.dgvDepartment.RowTemplate.ReadOnly = true;
-            this.dgvDepartment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDepartment.Size = new System.Drawing.Size(533, 210);
-            this.dgvDepartment.TabIndex = 4;
-            this.dgvDepartment.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDepartment_CellDoubleClick);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(86, 56);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 28);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "www.nl-cls.com";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(86, 31);
+            this.label5.Location = new System.Drawing.Point(87, 58);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 28);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "nl-cls.@gmail.com";
+            this.label5.Size = new System.Drawing.Size(120, 28);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "www.nl-cls.com";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(86, 0);
+            this.label6.Location = new System.Drawing.Point(87, 33);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 31);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "NL-CLS Salary";
+            this.label6.Size = new System.Drawing.Size(137, 28);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "nl-cls.@gmail.com";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Alice5 95", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(87, 2);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(134, 31);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "NL-CLS Salary";
             // 
             // btPrint
             // 
-            this.btPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(148)))));
+            this.btPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btPrint.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPrint.ForeColor = System.Drawing.Color.White;
-            this.btPrint.Location = new System.Drawing.Point(27, 190);
+            this.btPrint.Location = new System.Drawing.Point(152, 132);
             this.btPrint.Name = "btPrint";
-            this.btPrint.Size = new System.Drawing.Size(75, 32);
-            this.btPrint.TabIndex = 6;
+            this.btPrint.Size = new System.Drawing.Size(95, 38);
+            this.btPrint.TabIndex = 9;
             this.btPrint.Text = "Print";
             this.btPrint.UseVisualStyleBackColor = true;
             this.btPrint.Click += new System.EventHandler(this.btPrint_Click);
             // 
-            // frmDept
+            // frmQualification
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(57)))), ((int)(((byte)(85)))));
-            this.ClientSize = new System.Drawing.Size(579, 561);
+            this.ClientSize = new System.Drawing.Size(698, 596);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dgvDepartment);
-            this.Controls.Add(this.gunaCirclePictureBox1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.dgvQualification);
+            this.Controls.Add(this.gunaCirclePictureBox1);
+            this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Name = "frmDept";
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Name = "frmQualification";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDept";
-            this.Load += new System.EventHandler(this.frmDept_Load);
+            this.Text = "frmAualiaction";
+            this.Load += new System.EventHandler(this.frmQualification_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQualification)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDepartment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dgvQualification;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.DataGridView dgvDepartment;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbNameEngQ;
+        private System.Windows.Forms.ComboBox cmbNameLaoQ;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btPrint;
     }
 }

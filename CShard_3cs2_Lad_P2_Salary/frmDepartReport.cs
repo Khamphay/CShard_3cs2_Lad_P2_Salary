@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace CShard_3cs2_Lad_P2_Salary
 {
-    public partial class frmAualiaction : Form
+    public partial class frmDepartReport : Form
     {
-        public frmAualiaction()
+        public frmDepartReport()
         {
             InitializeComponent();
+            crystalReportViewer1.RefreshReport();
         }
     }
 }
