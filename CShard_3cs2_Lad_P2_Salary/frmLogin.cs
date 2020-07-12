@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CShard_3cs2_Lad_P2_Salary
 {
-    public partial class Form1 : Form
+    public partial class frmLogin : Form
     {
-        public Form1()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace CShard_3cs2_Lad_P2_Salary
         private void tbLogin_Click(object sender, EventArgs e)
         {
             frmHome home = new frmHome();
-            this.Close();
+            this.Hide();
             home.Show();
         }
 

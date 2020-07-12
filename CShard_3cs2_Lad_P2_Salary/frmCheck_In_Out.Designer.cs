@@ -50,6 +50,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnewuser = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckInOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -218,6 +219,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(113, 36);
             this.txtID.TabIndex = 14;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtemail
             // 
@@ -264,13 +266,14 @@
             this.btnewuser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnewuser.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnewuser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnewuser.Location = new System.Drawing.Point(810, 212);
+            this.btnewuser.Location = new System.Drawing.Point(695, 200);
             this.btnewuser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnewuser.Name = "btnewuser";
-            this.btnewuser.Size = new System.Drawing.Size(101, 34);
+            this.btnewuser.Size = new System.Drawing.Size(101, 49);
             this.btnewuser.TabIndex = 21;
             this.btnewuser.Text = "Check Out";
             this.btnewuser.UseVisualStyleBackColor = true;
+            this.btnewuser.Click += new System.EventHandler(this.btnewuser_Click);
             // 
             // button1
             // 
@@ -279,19 +282,37 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(695, 212);
+            this.button1.Location = new System.Drawing.Point(580, 200);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 34);
+            this.button1.Size = new System.Drawing.Size(91, 49);
             this.button1.TabIndex = 21;
             this.button1.Text = "Check In";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btPrint
+            // 
+            this.btPrint.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPrint.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPrint.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btPrint.Location = new System.Drawing.Point(820, 200);
+            this.btPrint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btPrint.Name = "btPrint";
+            this.btPrint.Size = new System.Drawing.Size(91, 49);
+            this.btPrint.TabIndex = 21;
+            this.btPrint.Text = "Print";
+            this.btPrint.UseVisualStyleBackColor = true;
+            this.btPrint.Click += new System.EventHandler(this.btPrint_Click);
             // 
             // frmCheck_In_Out
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(57)))), ((int)(((byte)(85)))));
             this.ClientSize = new System.Drawing.Size(928, 540);
+            this.Controls.Add(this.btPrint);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnewuser);
             this.Controls.Add(this.lbDateTime);
@@ -346,5 +367,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnewuser;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btPrint;
     }
 }

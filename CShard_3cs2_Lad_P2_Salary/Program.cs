@@ -16,7 +16,7 @@ namespace CShard_3cs2_Lad_P2_Salary
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmLogin());
         }
     }
 }

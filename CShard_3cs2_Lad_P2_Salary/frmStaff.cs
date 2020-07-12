@@ -13,9 +13,11 @@ namespace CShard_3cs2_Lad_P2_Salary
 {
     public partial class frmStaff : Form
     {
-        public frmStaff()
+        frmHome _home;
+        public frmStaff(frmHome home)
         {
             InitializeComponent();
+            _home = home;
         }
         SqlConnection conn = MyConnect.Connected();
         SqlDataAdapter da;
@@ -145,6 +147,7 @@ namespace CShard_3cs2_Lad_P2_Salary
                 {
                     ShowData();
                     ClearText();
+                    _home.ShowData();
                 }
             }
             catch (Exception ex)
@@ -178,6 +181,7 @@ namespace CShard_3cs2_Lad_P2_Salary
                 {
                     ShowData();
                     ClearText();
+                    _home.ShowData();
                 }
             }
             catch (Exception ex)
@@ -194,6 +198,7 @@ namespace CShard_3cs2_Lad_P2_Salary
                 cmd.ExecuteNonQuery();
                 ShowData();
                 ClearText();
+                _home.ShowData();
             }
             catch (Exception ex)
             {

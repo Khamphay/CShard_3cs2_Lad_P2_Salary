@@ -23,7 +23,7 @@ namespace CShard_3cs2_Lad_P2_Salary
         DataSet ds;
 
         string[] col = { "ລະຫັດ", "ຊື່(ພາສາລາວ)", "ນາມສະກຸນ(ພາສາລາວ)", "ຊື່(ພາສາອັງກິດ)", "ນາມສະກຸນ(ພາສາອັງກິດ)", "ເພດ", "ສະຖານະ", "ວ.ດ.ປ ເກີດ", "ບ້ານ", "ເມືອງ", "ແຂວງ", "ເບີໂທ", "Email", "Facbook", "ລະດັບການສຶກ(ພາສາອັງກິດ)", "ລະດັບການສຶກ(ພາສາລາວ)", "ຕຳແໜ່ງ(ພາສາອັງກິດ)", "ຕຳແໜ່ງ(ພາສາລາວ)", "ພະແນກ"};
-        private void ShowData()
+        public void ShowData()
         {
             try
             {
@@ -59,7 +59,7 @@ namespace CShard_3cs2_Lad_P2_Salary
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
+            frmLogin login = new frmLogin();
             DialogResult dir = MessageBox.Show("Are you sure to log-out?", "Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dir == DialogResult.Yes)
             {
@@ -74,7 +74,7 @@ namespace CShard_3cs2_Lad_P2_Salary
 
         private void staffToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmStaff staff = new frmStaff();
+            frmStaff staff = new frmStaff(this);
             staff.Show();
         }
 
@@ -116,6 +116,35 @@ namespace CShard_3cs2_Lad_P2_Salary
         private void basicSaralyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BasicSalary salary = new BasicSalary();
+            salary.Show();
+        }
+
+        private void frmHome_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmCheck_In_Out in_Out = new frmCheck_In_Out();
+            in_Out.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmStaff staff = new frmStaff(this);
+            staff.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmCreateUser createUseruser = new frmCreateUser();
+            createUseruser.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmBasiSalary salary = new frmBasiSalary();
             salary.Show();
         }
     }

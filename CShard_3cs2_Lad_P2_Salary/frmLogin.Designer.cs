@@ -1,6 +1,6 @@
 ﻿namespace CShard_3cs2_Lad_P2_Salary
 {
-    partial class Form1
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.tbLogin = new System.Windows.Forms.Button();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();

@@ -84,7 +84,7 @@ namespace CShard_3cs2_Lad_P2_Salary
 
         private void brexit_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
+            frmLogin login = new frmLogin();
             DialogResult dir = MessageBox.Show("Are you sure?", "Exit programe", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
             if (dir == DialogResult.Yes)
             {

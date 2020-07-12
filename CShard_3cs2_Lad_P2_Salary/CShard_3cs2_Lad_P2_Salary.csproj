@@ -70,6 +70,12 @@
       <DependentUpon>crBasiSalaryReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="crCheckInOutReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCheckInOutReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="crDepartReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -94,17 +100,23 @@
       <DependentUpon>crStaffReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBasiSalary.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBasiSalary.Designer.cs">
       <DependentUpon>frmBasiSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckInOutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckInOutReport.Designer.cs">
+      <DependentUpon>frmCheckInOutReport.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCheck_In_Out.cs">
       <SubType>Form</SubType>
@@ -183,6 +195,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crBasiSalaryReport.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="crCheckInOutReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCheckInOutReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="crDepartReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crDepartReport.cs</LastGenOutput>
@@ -199,11 +215,14 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crStaffReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBasiSalary.resx">
       <DependentUpon>frmBasiSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckInOutReport.resx">
+      <DependentUpon>frmCheckInOutReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCheck_In_Out.resx">
       <DependentUpon>frmCheck_In_Out.cs</DependentUpon>
