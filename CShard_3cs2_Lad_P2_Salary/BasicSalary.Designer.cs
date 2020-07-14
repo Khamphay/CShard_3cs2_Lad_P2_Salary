@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BasicSalary));
             this.dgvSalary = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btExit = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
+            this.btPrint = new System.Windows.Forms.Button();
             this.btEdit = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
+            this.btExit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalary)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -65,10 +65,10 @@
             this.dgvSalary.ReadOnly = true;
             this.dgvSalary.RowHeadersWidth = 5;
             this.dgvSalary.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvSalary.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvSalary.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSalary.RowTemplate.Height = 30;
             this.dgvSalary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSalary.Size = new System.Drawing.Size(612, 202);
@@ -78,11 +78,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lao_Ketmany2", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Alice5 95", 18F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(327, 28);
+            this.label3.Location = new System.Drawing.Point(306, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 37);
+            this.label3.Size = new System.Drawing.Size(134, 40);
             this.label3.TabIndex = 16;
             this.label3.Text = "Basic Salary";
             // 
@@ -103,22 +103,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add Department";
             // 
-            // btExit
-            // 
-            this.btExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btExit.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
-            this.btExit.ForeColor = System.Drawing.Color.White;
-            this.btExit.Location = new System.Drawing.Point(579, 4);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(54, 38);
-            this.btExit.TabIndex = 9;
-            this.btExit.Text = "Exit";
-            this.btExit.UseVisualStyleBackColor = true;
-            this.btExit.Click += new System.EventHandler(this.button7_Click);
-            // 
             // btSave
             // 
             this.btSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -133,6 +117,21 @@
             this.btSave.Text = "Save";
             this.btSave.UseVisualStyleBackColor = true;
             this.btSave.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btPrint
+            // 
+            this.btPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(148)))));
+            this.btPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPrint.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.btPrint.ForeColor = System.Drawing.Color.White;
+            this.btPrint.Location = new System.Drawing.Point(167, 130);
+            this.btPrint.Name = "btPrint";
+            this.btPrint.Size = new System.Drawing.Size(75, 38);
+            this.btPrint.TabIndex = 7;
+            this.btPrint.Text = "Print";
+            this.btPrint.UseVisualStyleBackColor = true;
+            this.btPrint.Click += new System.EventHandler(this.btPrint_Click);
             // 
             // btEdit
             // 
@@ -163,6 +162,22 @@
             this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = true;
             this.btDelete.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btExit
+            // 
+            this.btExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExit.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.btExit.ForeColor = System.Drawing.Color.White;
+            this.btExit.Location = new System.Drawing.Point(579, 4);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(54, 38);
+            this.btExit.TabIndex = 9;
+            this.btExit.Text = "Exit";
+            this.btExit.UseVisualStyleBackColor = true;
+            this.btExit.Click += new System.EventHandler(this.button7_Click);
             // 
             // groupBox1
             // 
@@ -266,21 +281,6 @@
             this.label7.Size = new System.Drawing.Size(134, 31);
             this.label7.TabIndex = 21;
             this.label7.Text = "NL-CLS Salary";
-            // 
-            // btPrint
-            // 
-            this.btPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(148)))));
-            this.btPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btPrint.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
-            this.btPrint.ForeColor = System.Drawing.Color.White;
-            this.btPrint.Location = new System.Drawing.Point(167, 130);
-            this.btPrint.Name = "btPrint";
-            this.btPrint.Size = new System.Drawing.Size(75, 38);
-            this.btPrint.TabIndex = 7;
-            this.btPrint.Text = "Print";
-            this.btPrint.UseVisualStyleBackColor = true;
-            this.btPrint.Click += new System.EventHandler(this.btPrint_Click);
             // 
             // BasicSalary
             // 

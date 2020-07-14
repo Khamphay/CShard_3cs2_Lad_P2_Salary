@@ -144,7 +144,7 @@ namespace CShard_3cs2_Lad_P2_Salary
 
         private void button5_Click(object sender, EventArgs e)
         {
-            frmBasiSalary salary = new frmBasiSalary();
+          BasicSalary salary = new BasicSalary();
             salary.Show();
         }
     }

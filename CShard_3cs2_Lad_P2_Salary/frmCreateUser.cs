@@ -23,6 +23,7 @@ namespace CShard_3cs2_Lad_P2_Salary
         SqlCommand cmd;
         SqlDataReader dr;
         DataSet ds = new DataSet();
+        DataTable table;
         string posi_id = "";
         AutoCompleteStringCollection auto = new AutoCompleteStringCollection();
 
@@ -30,25 +31,20 @@ namespace CShard_3cs2_Lad_P2_Salary
         {
             try
             {
-                cmd = new SqlCommand("Select Po_Name_Eng From tbPosition",conn);
-                dr = cmd.ExecuteReader();
-                if (dr.HasRows && dr["Po_Name_Eng"].ToString()!="")
+                da = new SqlDataAdapter("Select Po_Name_Eng, Po_Name_Lao From tbPosition", conn);
+                table = new DataTable();
+                da.Fill(table);
+                if (table.Rows.Count>0)
                 {
-                    while (dr.Read())
+                    for (int i=0;i<table.Rows.Count;i++)
                     {
-                        cmbPosition.Items.Add(dr["Po_Name_Eng"].ToString());
-                        auto.Add(dr["Po_Name_Eng"].ToString());
+                        cmbNameEngP.Items.Add(table.Rows[i][0].ToString());
+                        cmbNameLaoP.Items.Add(table.Rows[i][1].ToString());
                     }
-                    cmbPosition.AutoCompleteCustomSource = auto;
-                    cmbPosition.AutoCompleteMode = AutoCompleteMode.Suggest;
-                    cmbPosition.AutoCompleteSource = AutoCompleteSource.CustomSource;
                 }
             }catch (Exception ex)
             {
 
-            }finally
-            {
-                dr.Close();
             }
         }
         private void Save()
@@ -80,21 +76,22 @@ namespace CShard_3cs2_Lad_P2_Salary
             txtRepass.Clear();
             posi_id = "";
             txtUser.Clear();
+            cmbNameEngP.ResetText();
+            cmbNameLaoP.ResetText();
         }
 
         private void brexit_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
-            DialogResult dir = MessageBox.Show("Are you sure?", "Exit programe", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-            if (dir == DialogResult.Yes)
-            {
-                this.Hide();
-                login.Show();
-            }
-            else
-            {
+            //frmLogin login = new frmLogin();
+            //DialogResult dir = MessageBox.Show("Are you sure?", "Exit programe", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            //if (dir == DialogResult.Yes)
+            //{
+            this.Close();
+            //}
+            //else
+            //{
                 
-            }
+            //}
         }
 
         private void frmUser_Load(object sender, EventArgs e)
@@ -105,9 +102,42 @@ namespace CShard_3cs2_Lad_P2_Salary
 
         private void cmbPosition_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            if (cmbNameEngP.SelectedIndex == cmbNameEngP.FindString("Administrator"))
+            {
+                cmbNameLaoP.ResetText();
+                cmbNameLaoP.SelectedText = "ປະທານ";
+            }
+            else if (cmbNameEngP.SelectedIndex == cmbNameEngP.FindString("Vice Administrator"))
+            {
+                cmbNameLaoP.ResetText();
+                cmbNameLaoP.SelectedText = "ຜູ້ບໍລິຫານ";
+            }
+            else if (cmbNameEngP.SelectedIndex == cmbNameEngP.FindString("Manager"))
+            {
+                cmbNameLaoP.ResetText();
+                cmbNameLaoP.SelectedText = "ຫົວໜັາພະແນກ";
+            }
+            else if (cmbNameEngP.SelectedIndex == cmbNameEngP.FindString("Head of Department"))
+            {
+                cmbNameLaoP.ResetText();
+                cmbNameLaoP.SelectedText = "ຫົວໜ້າພະແນກ";
+            }
+            else if (cmbNameEngP.SelectedIndex == cmbNameEngP.FindString("Deputy of Department"))
+            {
+                cmbNameLaoP.ResetText();
+                cmbNameLaoP.SelectedText = "ຮອງພະແນກ";
+            }
+            else if (cmbNameEngP.SelectedIndex == cmbNameEngP.FindString("Employee"))
+            {
+                cmbNameLaoP.ResetText();
+                cmbNameLaoP.SelectedText = "ພະນັກງານ";
+            }
+
+
             try
             {
-                cmd = new SqlCommand("Select Po_ID From tbPosition Where Po_Name_Eng=N'" + cmbPosition.Text + "'", conn);
+                cmd = new SqlCommand("Select Po_ID From tbPosition Where Po_Name_Eng=N'" + cmbNameEngP.Text + "'", conn);
                 dr = cmd.ExecuteReader();
                 if (dr.HasRows && dr["Po_ID"].ToString() != "")
                 {
@@ -133,6 +163,53 @@ namespace CShard_3cs2_Lad_P2_Salary
         private void txtID_Enter(object sender, EventArgs e)
         {
             InputLanguage.CurrentInputLanguage = KeyBord.eng;
+        }
+
+        private void Key_Enter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SelectNextControl((Control)sender, true, true, true, true);
+            }
+        }
+
+        private void cmbNameLaoP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ປະທານ"))
+            {
+                cmbNameEngP.ResetText();
+                cmbNameEngP.SelectedText = "Administrator";
+            }
+            else if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ຮອງປະທານ"))
+            {
+                cmbNameEngP.ResetText();
+                cmbNameEngP.SelectedText = "Vice Administrator";
+            }
+            else if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ພະແນກບໍລິຫານ"))
+            {
+                cmbNameEngP.ResetText();
+                cmbNameEngP.SelectedText = "Aministive";
+            }
+            else if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ຜູ້ບໍລິຫານ"))
+            {
+                cmbNameEngP.ResetText();
+                cmbNameEngP.SelectedText = "Manager";
+            }
+            else if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ຫົວໜ້າພະແນກ"))
+            {
+                cmbNameEngP.ResetText();
+                cmbNameEngP.SelectedText = "Head of Department";
+            }
+            else if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ຮອງພະແນກ"))
+            {
+                cmbNameEngP.ResetText();
+                cmbNameEngP.SelectedText = "Deputy of Department";
+            }
+            else if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ພະນັກງານ"))
+            {
+                cmbNameEngP.ResetText();
+                cmbNameEngP.SelectedText = "Employee";
+            }
         }
     }
 }

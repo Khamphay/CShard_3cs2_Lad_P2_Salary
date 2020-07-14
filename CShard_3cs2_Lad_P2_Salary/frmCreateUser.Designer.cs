@@ -30,42 +30,46 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbPosition = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.cmbNameEngP = new System.Windows.Forms.ComboBox();
             this.txtRepass = new System.Windows.Forms.TextBox();
             this.txtNewpass = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnewuser = new System.Windows.Forms.Button();
             this.brexit = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbNameLaoP = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lao_Ketmany2", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Alice5 95", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(4, 0);
+            this.label1.Location = new System.Drawing.Point(223, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 37);
+            this.label1.Size = new System.Drawing.Size(112, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "New User";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmbPosition);
+            this.groupBox1.Controls.Add(this.cmbNameLaoP);
+            this.groupBox1.Controls.Add(this.cmbNameEngP);
             this.groupBox1.Controls.Add(this.txtRepass);
             this.groupBox1.Controls.Add(this.txtNewpass);
             this.groupBox1.Controls.Add(this.txtUser);
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.txtID);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label6);
@@ -78,21 +82,77 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(546, 282);
+            this.groupBox1.Size = new System.Drawing.Size(546, 342);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input information";
             // 
-            // cmbPosition
+            // cmbNameEngP
             // 
-            this.cmbPosition.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
-            this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Location = new System.Drawing.Point(43, 215);
-            this.cmbPosition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbPosition.Name = "cmbPosition";
-            this.cmbPosition.Size = new System.Drawing.Size(227, 36);
-            this.cmbPosition.TabIndex = 2;
-            this.cmbPosition.SelectedIndexChanged += new System.EventHandler(this.cmbPosition_SelectedIndexChanged);
+            this.cmbNameEngP.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.cmbNameEngP.FormattingEnabled = true;
+            this.cmbNameEngP.Location = new System.Drawing.Point(43, 215);
+            this.cmbNameEngP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbNameEngP.Name = "cmbNameEngP";
+            this.cmbNameEngP.Size = new System.Drawing.Size(227, 36);
+            this.cmbNameEngP.TabIndex = 2;
+            this.cmbNameEngP.SelectedIndexChanged += new System.EventHandler(this.cmbPosition_SelectedIndexChanged);
+            this.cmbNameEngP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Enter);
+            // 
+            // txtRepass
+            // 
+            this.txtRepass.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.txtRepass.Location = new System.Drawing.Point(280, 215);
+            this.txtRepass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtRepass.Name = "txtRepass";
+            this.txtRepass.Size = new System.Drawing.Size(227, 36);
+            this.txtRepass.TabIndex = 6;
+            this.txtRepass.Enter += new System.EventHandler(this.txtID_Enter);
+            this.txtRepass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Enter);
+            // 
+            // txtNewpass
+            // 
+            this.txtNewpass.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.txtNewpass.Location = new System.Drawing.Point(280, 140);
+            this.txtNewpass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNewpass.Name = "txtNewpass";
+            this.txtNewpass.Size = new System.Drawing.Size(227, 36);
+            this.txtNewpass.TabIndex = 5;
+            this.txtNewpass.Enter += new System.EventHandler(this.txtID_Enter);
+            this.txtNewpass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Enter);
+            // 
+            // txtUser
+            // 
+            this.txtUser.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.txtUser.Location = new System.Drawing.Point(280, 58);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(227, 36);
+            this.txtUser.TabIndex = 4;
+            this.txtUser.Enter += new System.EventHandler(this.txtID_Enter);
+            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Enter);
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.txtName.Location = new System.Drawing.Point(43, 141);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(227, 36);
+            this.txtName.TabIndex = 1;
+            this.txtName.Enter += new System.EventHandler(this.txtID_Enter);
+            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Enter);
+            // 
+            // txtID
+            // 
+            this.txtID.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.txtID.Location = new System.Drawing.Point(43, 59);
+            this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(227, 36);
+            this.txtID.TabIndex = 0;
+            this.txtID.Enter += new System.EventHandler(this.txtID_Enter);
+            this.txtID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Enter);
             // 
             // label7
             // 
@@ -105,6 +165,17 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "Re-password";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(43, 188);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 28);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Position (English)";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -115,28 +186,6 @@
             this.label6.Size = new System.Drawing.Size(107, 28);
             this.label6.TabIndex = 1;
             this.label6.Text = "New password";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(280, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 28);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "User";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(43, 188);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 28);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Position";
             // 
             // label3
             // 
@@ -149,6 +198,17 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Name and surename";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(280, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 28);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "User";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -160,67 +220,17 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "ID";
             // 
-            // txtRepass
-            // 
-            this.txtRepass.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
-            this.txtRepass.Location = new System.Drawing.Point(280, 215);
-            this.txtRepass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtRepass.Name = "txtRepass";
-            this.txtRepass.Size = new System.Drawing.Size(227, 36);
-            this.txtRepass.TabIndex = 0;
-            this.txtRepass.Enter += new System.EventHandler(this.txtID_Enter);
-            // 
-            // txtNewpass
-            // 
-            this.txtNewpass.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
-            this.txtNewpass.Location = new System.Drawing.Point(280, 140);
-            this.txtNewpass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNewpass.Name = "txtNewpass";
-            this.txtNewpass.Size = new System.Drawing.Size(227, 36);
-            this.txtNewpass.TabIndex = 0;
-            this.txtNewpass.Enter += new System.EventHandler(this.txtID_Enter);
-            // 
-            // txtUser
-            // 
-            this.txtUser.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
-            this.txtUser.Location = new System.Drawing.Point(280, 58);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(227, 36);
-            this.txtUser.TabIndex = 0;
-            this.txtUser.Enter += new System.EventHandler(this.txtID_Enter);
-            // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
-            this.txtName.Location = new System.Drawing.Point(43, 141);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(227, 36);
-            this.txtName.TabIndex = 0;
-            this.txtName.Enter += new System.EventHandler(this.txtID_Enter);
-            // 
-            // txtID
-            // 
-            this.txtID.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
-            this.txtID.Location = new System.Drawing.Point(43, 59);
-            this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(227, 36);
-            this.txtID.TabIndex = 0;
-            this.txtID.Enter += new System.EventHandler(this.txtID_Enter);
-            // 
             // btnewuser
             // 
             this.btnewuser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnewuser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnewuser.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnewuser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnewuser.Location = new System.Drawing.Point(176, 346);
+            this.btnewuser.Location = new System.Drawing.Point(176, 423);
             this.btnewuser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnewuser.Name = "btnewuser";
             this.btnewuser.Size = new System.Drawing.Size(106, 47);
-            this.btnewuser.TabIndex = 2;
+            this.btnewuser.TabIndex = 7;
             this.btnewuser.Text = "New user";
             this.btnewuser.UseVisualStyleBackColor = true;
             this.btnewuser.Click += new System.EventHandler(this.btnewuser_Click);
@@ -231,25 +241,48 @@
             this.brexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.brexit.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brexit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.brexit.Location = new System.Drawing.Point(297, 346);
+            this.brexit.Location = new System.Drawing.Point(297, 423);
             this.brexit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.brexit.Name = "brexit";
             this.brexit.Size = new System.Drawing.Size(65, 47);
-            this.brexit.TabIndex = 2;
+            this.brexit.TabIndex = 8;
             this.brexit.Text = "Exit";
             this.brexit.UseVisualStyleBackColor = true;
             this.brexit.Click += new System.EventHandler(this.brexit_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(43, 258);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(104, 28);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Position (Lao)";
+            // 
+            // cmbNameLaoP
+            // 
+            this.cmbNameLaoP.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.cmbNameLaoP.FormattingEnabled = true;
+            this.cmbNameLaoP.Location = new System.Drawing.Point(43, 285);
+            this.cmbNameLaoP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbNameLaoP.Name = "cmbNameLaoP";
+            this.cmbNameLaoP.Size = new System.Drawing.Size(227, 36);
+            this.cmbNameLaoP.TabIndex = 3;
+            this.cmbNameLaoP.SelectedIndexChanged += new System.EventHandler(this.cmbNameLaoP_SelectedIndexChanged);
+            this.cmbNameLaoP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Enter);
             // 
             // frmCreateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(57)))), ((int)(((byte)(85)))));
-            this.ClientSize = new System.Drawing.Size(570, 406);
+            this.ClientSize = new System.Drawing.Size(570, 483);
             this.Controls.Add(this.brexit);
-            this.Controls.Add(this.btnewuser);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnewuser);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCreateUser";
@@ -280,6 +313,8 @@
         private System.Windows.Forms.TextBox txtRepass;
         private System.Windows.Forms.Button btnewuser;
         private System.Windows.Forms.Button brexit;
-        private System.Windows.Forms.ComboBox cmbPosition;
+        private System.Windows.Forms.ComboBox cmbNameEngP;
+        private System.Windows.Forms.ComboBox cmbNameLaoP;
+        private System.Windows.Forms.Label label8;
     }
 }

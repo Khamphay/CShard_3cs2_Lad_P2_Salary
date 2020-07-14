@@ -15,7 +15,7 @@ namespace CShard_3cs2_Lad_P2_Salary
         public frmCheckInOutReport()
         {
             InitializeComponent();
-            crystalReportViewer1.RefreshReport();
+           // crystalReportViewer1.RefreshReport();
         }
     }
 }

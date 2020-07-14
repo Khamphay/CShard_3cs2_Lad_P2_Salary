@@ -54,10 +54,11 @@ namespace CShard_3cs2_Lad_P2_Salary
         {
             try
             {
-                da = new SqlDataAdapter("Select chk_ID From tbCheck_In_Out Where Staff='" + txtID.Text + "' And check_out='" + DateTime.Now + "'", con);
+                da = new SqlDataAdapter("Select chk_ID From tbCheck_In_Out Where Staff='" + txtID.Text + "' And (check_in Is not null And check_out Is null)", con);
                 table = new DataTable();
                 da.Fill(table);
-                if (table.Rows.Count<1) {
+                if (table.Rows.Count < 1)
+                {
 
                     da = new SqlDataAdapter("Select Max(chk_ID) maxid From tbCheck_In_Out", con);
                     table = new DataTable();
@@ -79,7 +80,8 @@ namespace CShard_3cs2_Lad_P2_Salary
                     {
                         ShowData();
                     }
-                }else
+                }
+                else
                 {
                     MessageBox.Show("You had check-in!.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -94,7 +96,7 @@ namespace CShard_3cs2_Lad_P2_Salary
         {
             try
             {
-                da = new SqlDataAdapter("Select chk_ID From tbCheck_In_Out Where Staff='"+txtID.Text+"'", con);
+                da = new SqlDataAdapter("Select chk_ID From tbCheck_In_Out Where Staff='"+txtID.Text+ "' And check_out Is Null", con);
                 table = new DataTable();
                 da.Fill(table);
                 if (table.Rows.Count > 0)
