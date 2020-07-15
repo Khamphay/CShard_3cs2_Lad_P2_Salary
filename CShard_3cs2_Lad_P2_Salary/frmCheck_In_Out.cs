@@ -30,7 +30,7 @@ namespace CShard_3cs2_Lad_P2_Salary
         AutoCompleteStringCollection auto;
         int id;
 
-        string[] col = { "ລຳດັບ", "ຊື່(ພາສາລາວ)", "ນາມສະກຸນ(ພາສາລາວ)", "ຊື່(ພາສາອັງກິດ)", "ນາມສະກຸນ(ພາສາອັງກິດ)", "ເວລາເຂົ້າ", "ເວລາອອກ"};
+        string[] col = { "ລຳດັບ","ລະຫັດ ພ/ງ" ,"ຊື່(ພາສາລາວ)", "ນາມສະກຸນ(ພາສາລາວ)", "ຊື່(ພາສາອັງກິດ)", "ນາມສະກຸນ(ພາສາອັງກິດ)", "ເວລາເຂົ້າ", "ເວລາອອກ"};
         private void ShowData()
         {
             try
@@ -54,36 +54,39 @@ namespace CShard_3cs2_Lad_P2_Salary
         {
             try
             {
-                da = new SqlDataAdapter("Select chk_ID From tbCheck_In_Out Where Staff='" + txtID.Text + "' And (check_in Is not null And check_out Is null)", con);
-                table = new DataTable();
-                da.Fill(table);
-                if (table.Rows.Count < 1)
+                if (txtID.Text != "" && txtName.Text != "" && txtSureName.Text != "" && txtTel.Text != "" && txtemail.Text != "") 
                 {
-
-                    da = new SqlDataAdapter("Select Max(chk_ID) maxid From tbCheck_In_Out", con);
+                    da = new SqlDataAdapter("Select chk_ID From tbCheck_In_Out Where Staff='" + txtID.Text + "' And (check_in Is not null And check_out Is null)", con);
                     table = new DataTable();
                     da.Fill(table);
-                    if (table.Rows.Count > 0 && table.Rows[0][0].ToString() != "")
+                    if (table.Rows.Count < 1)
                     {
-                        id = int.Parse(table.Rows[0][0].ToString()) + 1;
+
+                        da = new SqlDataAdapter("Select Max(chk_ID) maxid From tbCheck_In_Out", con);
+                        table = new DataTable();
+                        da.Fill(table);
+                        if (table.Rows.Count > 0 && table.Rows[0][0].ToString() != "")
+                        {
+                            id = int.Parse(table.Rows[0][0].ToString()) + 1;
+                        }
+                        else
+                        {
+                            id = 1;
+                        }
+
+                        cmd = new SqlCommand("Insert Into tbCheck_In_Out (chk_ID, Staff, check_in) Values(@id, @staff, @timeIn)", con);
+                        cmd.Parameters.AddWithValue("id", DbType.Int32).Value = id;
+                        cmd.Parameters.AddWithValue("staff", txtID.Text);
+                        cmd.Parameters.AddWithValue("timeIn", DbType.DateTime).Value = DateTime.Now;
+                        if (cmd.ExecuteNonQuery() == 1)
+                        {
+                            ShowData();
+                        }
                     }
                     else
                     {
-                        id = 1;
+                        MessageBox.Show("You had check-in!.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-
-                    cmd = new SqlCommand("Insert Into tbCheck_In_Out (chk_ID, Staff, check_in) Values(@id, @staff, @timeIn)", con);
-                    cmd.Parameters.AddWithValue("id", DbType.Int32).Value = id;
-                    cmd.Parameters.AddWithValue("staff", txtID.Text);
-                    cmd.Parameters.AddWithValue("timeIn", DbType.DateTime).Value = DateTime.Now;
-                    if (cmd.ExecuteNonQuery() == 1)
-                    {
-                        ShowData();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("You had check-in!.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -191,11 +194,23 @@ namespace CShard_3cs2_Lad_P2_Salary
                     txtTel.Text = table.Rows[0][2].ToString();
                     txtemail.Text = table.Rows[0][3].ToString();
                 }
+                else
+                {
+                    txtName.Clear();
+                    txtSureName.Clear();
+                    txtTel.Clear();
+                    txtemail.Clear();
+                }
             }
             catch (Exception)
             {
                 throw;
             }
+        }
+
+        private void DisbleKey(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }
