@@ -82,7 +82,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(127, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 68);
+            this.label1.Size = new System.Drawing.Size(183, 44);
             this.label1.TabIndex = 7;
             this.label1.Text = "NL-CLS Salary";
             // 
@@ -107,7 +107,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(408, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(338, 68);
+            this.label2.Size = new System.Drawing.Size(229, 44);
             this.label2.TabIndex = 7;
             this.label2.Text = "Check In-Check Out";
             // 
@@ -118,7 +118,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(130, 85);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 43);
+            this.label4.Size = new System.Drawing.Size(120, 28);
             this.label4.TabIndex = 9;
             this.label4.Text = "www.nl-cls.com";
             // 
@@ -129,7 +129,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(129, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 43);
+            this.label3.Size = new System.Drawing.Size(137, 28);
             this.label3.TabIndex = 10;
             this.label3.Text = "nl-cls.@gmail.com";
             // 
@@ -141,7 +141,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(531, 130);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 43);
+            this.label6.Size = new System.Drawing.Size(34, 28);
             this.label6.TabIndex = 15;
             this.label6.Text = "Tel";
             // 
@@ -153,7 +153,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(129, 130);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 43);
+            this.label5.Size = new System.Drawing.Size(51, 28);
             this.label5.TabIndex = 16;
             this.label5.Text = "Name";
             // 
@@ -165,7 +165,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(330, 129);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 43);
+            this.label7.Size = new System.Drawing.Size(77, 28);
             this.label7.TabIndex = 17;
             this.label7.Text = "Surename";
             // 
@@ -177,7 +177,7 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Location = new System.Drawing.Point(7, 131);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 43);
+            this.label8.Size = new System.Drawing.Size(29, 28);
             this.label8.TabIndex = 18;
             this.label8.Text = "ID";
             // 
@@ -188,7 +188,7 @@
             this.txtTel.Location = new System.Drawing.Point(531, 156);
             this.txtTel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(158, 50);
+            this.txtTel.Size = new System.Drawing.Size(158, 36);
             this.txtTel.TabIndex = 11;
             this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DisbleKey);
             // 
@@ -199,7 +199,7 @@
             this.txtName.Location = new System.Drawing.Point(129, 156);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(195, 50);
+            this.txtName.Size = new System.Drawing.Size(195, 36);
             this.txtName.TabIndex = 12;
             this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DisbleKey);
             // 
@@ -210,7 +210,7 @@
             this.txtSureName.Location = new System.Drawing.Point(330, 156);
             this.txtSureName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSureName.Name = "txtSureName";
-            this.txtSureName.Size = new System.Drawing.Size(195, 50);
+            this.txtSureName.Size = new System.Drawing.Size(195, 36);
             this.txtSureName.TabIndex = 13;
             this.txtSureName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DisbleKey);
             // 
@@ -221,7 +221,7 @@
             this.txtID.Location = new System.Drawing.Point(7, 156);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(113, 50);
+            this.txtID.Size = new System.Drawing.Size(113, 36);
             this.txtID.TabIndex = 14;
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
@@ -232,7 +232,7 @@
             this.txtemail.Location = new System.Drawing.Point(695, 156);
             this.txtemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(216, 50);
+            this.txtemail.Size = new System.Drawing.Size(216, 36);
             this.txtemail.TabIndex = 11;
             this.txtemail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DisbleKey);
             // 
@@ -244,7 +244,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Location = new System.Drawing.Point(695, 130);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 43);
+            this.label9.Size = new System.Drawing.Size(59, 28);
             this.label9.TabIndex = 15;
             this.label9.Text = "E-Mail";
             // 
@@ -256,7 +256,7 @@
             this.lbDateTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbDateTime.Location = new System.Drawing.Point(758, 20);
             this.lbDateTime.Name = "lbDateTime";
-            this.lbDateTime.Size = new System.Drawing.Size(137, 43);
+            this.lbDateTime.Size = new System.Drawing.Size(91, 28);
             this.lbDateTime.TabIndex = 19;
             this.lbDateTime.Text = "lbDateTime";
             // 
@@ -338,6 +338,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCheck_In_Out";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCheck_In_Out";

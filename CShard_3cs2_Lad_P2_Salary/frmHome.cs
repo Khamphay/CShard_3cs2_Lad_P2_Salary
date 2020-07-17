@@ -43,6 +43,26 @@ namespace CShard_3cs2_Lad_P2_Salary
             }
         }
 
+        public void ShearchData(string data)
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select * From vw_Staff Where Name_Lao Like N'"+data+"%' Or Surname_Lao like N'%"+data+"%' Or Name_Eng like N'%"+data+"%' Or Surname_Eng like N'%"+data+"%' ", con);
+                ds = new DataSet();
+                da.Fill(ds, "st");
+                dgvStaff.DataSource = ds.Tables["st"];
+                for (int c = 0; c < col.Length; c++)
+                {
+                    dgvStaff.Columns[c].HeaderText = col[c];
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         private void button7_Click(object sender, EventArgs e)
         {
             
@@ -146,6 +166,17 @@ namespace CShard_3cs2_Lad_P2_Salary
         {
           BasicSalary salary = new BasicSalary();
             salary.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "") {
+                ShearchData(textBox1.Text);
+            }
+            else
+            {
+                ShowData();
+            }
         }
     }
 }

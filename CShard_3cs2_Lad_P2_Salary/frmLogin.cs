@@ -17,6 +17,9 @@ namespace CShard_3cs2_Lad_P2_Salary
             InitializeComponent();
         }
 
+
+
+
         private void btcancel_Click(object sender, EventArgs e)
         {
             Application.ExitThread();
@@ -24,6 +27,7 @@ namespace CShard_3cs2_Lad_P2_Salary
 
         private void tbLogin_Click(object sender, EventArgs e)
         {
+
             frmHome home = new frmHome();
             this.Hide();
             home.Show();

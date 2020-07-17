@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +75,7 @@
             // 
             this.menuStrip1.AutoSize = false;
             this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.managementToolStripMenuItem,
             this.employeeToolStripMenuItem,
@@ -95,7 +96,7 @@
             this.managementToolStripMenuItem.Image = global::CShard_3cs2_Lad_P2_Salary.Properties.Resources.home_100px;
             this.managementToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.managementToolStripMenuItem.Name = "managementToolStripMenuItem";
-            this.managementToolStripMenuItem.Size = new System.Drawing.Size(71, 32);
+            this.managementToolStripMenuItem.Size = new System.Drawing.Size(79, 32);
             this.managementToolStripMenuItem.Text = "Home";
             // 
             // employeeToolStripMenuItem
@@ -110,14 +111,14 @@
             this.employeeToolStripMenuItem.Image = global::CShard_3cs2_Lad_P2_Salary.Properties.Resources.view_details_100px;
             this.employeeToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(145, 32);
             this.employeeToolStripMenuItem.Text = "Basic information";
             // 
             // staffToolStripMenuItem
             // 
             this.staffToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.staffToolStripMenuItem.Name = "staffToolStripMenuItem";
-            this.staffToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.staffToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.staffToolStripMenuItem.Text = "Staff";
             this.staffToolStripMenuItem.Click += new System.EventHandler(this.staffToolStripMenuItem_Click);
             // 
@@ -125,7 +126,7 @@
             // 
             this.departmentToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.departmentToolStripMenuItem.Name = "departmentToolStripMenuItem";
-            this.departmentToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.departmentToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.departmentToolStripMenuItem.Text = "Department";
             this.departmentToolStripMenuItem.Click += new System.EventHandler(this.departmentToolStripMenuItem_Click);
             // 
@@ -133,7 +134,7 @@
             // 
             this.positionToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.positionToolStripMenuItem.Name = "positionToolStripMenuItem";
-            this.positionToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.positionToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.positionToolStripMenuItem.Text = "Position";
             this.positionToolStripMenuItem.Click += new System.EventHandler(this.positionToolStripMenuItem_Click);
             // 
@@ -141,7 +142,7 @@
             // 
             this.qualificationToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.qualificationToolStripMenuItem.Name = "qualificationToolStripMenuItem";
-            this.qualificationToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.qualificationToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.qualificationToolStripMenuItem.Text = "Qualification";
             this.qualificationToolStripMenuItem.Click += new System.EventHandler(this.qualificationToolStripMenuItem_Click);
             // 
@@ -155,7 +156,7 @@
             this.salaryToolStripMenuItem.Image = global::CShard_3cs2_Lad_P2_Salary.Properties.Resources.paycheque_100px;
             this.salaryToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.salaryToolStripMenuItem.Name = "salaryToolStripMenuItem";
-            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(73, 32);
+            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(81, 32);
             this.salaryToolStripMenuItem.Text = "Salary";
             // 
             // basicSaralyToolStripMenuItem
@@ -183,7 +184,7 @@
             this.userToolStripMenuItem.Image = global::CShard_3cs2_Lad_P2_Salary.Properties.Resources.male_user_100px;
             this.userToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(64, 32);
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(72, 32);
             this.userToolStripMenuItem.Text = "User";
             // 
             // createAccountToolStripMenuItem
@@ -210,7 +211,7 @@
             this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
             this.aboutToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(73, 32);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(81, 32);
             this.aboutToolStripMenuItem.Text = "Attent";
             // 
             // checkInOutToolStripMenuItem
@@ -228,7 +229,7 @@
             this.aboautToolStripMenuItem.Image = global::CShard_3cs2_Lad_P2_Salary.Properties.Resources.info_100px;
             this.aboautToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.aboautToolStripMenuItem.Name = "aboautToolStripMenuItem";
-            this.aboautToolStripMenuItem.Size = new System.Drawing.Size(73, 32);
+            this.aboautToolStripMenuItem.Size = new System.Drawing.Size(81, 32);
             this.aboautToolStripMenuItem.Text = "About";
             // 
             // label1
@@ -254,14 +255,14 @@
             this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvStaff.Location = new System.Drawing.Point(12, 194);
             this.dgvStaff.Name = "dgvStaff";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvStaff.RowHeadersWidth = 5;
             this.dgvStaff.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvStaff.RowTemplate.Height = 30;
@@ -467,10 +468,12 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(593, 152);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(291, 36);
             this.textBox1.TabIndex = 12;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox1
             // 
