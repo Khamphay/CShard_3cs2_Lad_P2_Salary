@@ -25,8 +25,8 @@ namespace CShard_3cs2_Lad_P2_Salary
         SqlDataReader dr;
         DataSet ds = new DataSet();
         AutoCompleteStringCollection auto;
-        string que_id = "", posi_id = "", dep_id = "", gender="", status="";
-        string[] col = { "ລະຫັດ", "ຊື່(ພາສາລາວ)", "ນາມສະກຸນ(ພາສາລາວ)", "ຊື່(ພາສາອັງກິດ)", "ນາມສະກຸນ(ພາສາອັງກິດ)", "ເພດ", "ສະຖານະ", "ວ.ດ.ປ ເກີດ", "ບ້ານ", "ເມືອງ", "ແຂວງ", "ເບີໂທ", "Email", "Facbook", "ລະດັບການສຶກ(ພາສາອັງກິດ)", "ລະດັບການສຶກ(ພາສາລາວ)", "ຕຳແໜ່ງ(ພາສາອັງກິດ)", "ຕຳແໜ່ງ(ພາສາລາວ)", "ພະແນກ" };
+        string que_id = "", posi_id = "", dep_id = "", gender="", status="", staff_id="";
+        string[] col = { "ລະຫັດ", "ຊື່(ພາສາລາວ)", "ນາມສະກຸນ(ພາສາລາວ)", "ຊື່(ພາສາອັງກິດ)", "ນາມສະກຸນ(ພາສາອັງກິດ)", "ເພດ", "ສະຖານະ", "ວ.ດ.ປ ເກີດ", "ບ້ານ", "ເມືອງ", "ແຂວງ", "ເບີໂທ", "Email", "Facbook", "ລະດັບການສຶກ(ພາສາອັງກິດ)", "ລະດັບການສຶກ(ພາສາລາວ)", "ຕຳແໜ່ງ(ພາສາອັງກິດ)", "ຕຳແໜ່ງ(ພາສາລາວ)", "ພະແນກ (ພາສາລາວ)", "ພະແນກ (ພາສາອັງກິດ)" };
 
 
         private void LoadQua()
@@ -79,14 +79,14 @@ namespace CShard_3cs2_Lad_P2_Salary
             try
             {
                 auto = new AutoCompleteStringCollection();
-                cmd = new SqlCommand("Select Dep_Name From tbDepartment", conn);
+                cmd = new SqlCommand("Select Dep_Name_Lao From tbDepartment", conn);
                 dr = cmd.ExecuteReader();
                 // dr.Read();
                 // if(dr.HasRows && dr["Dep_Name"].ToString()!=""){
                 while (dr.Read())
                 {
-                    cmbDeparment.Items.Add(dr["Dep_Name"].ToString());
-                    auto.Add(dr["Dep_Name"].ToString());
+                    cmbDeparment.Items.Add(dr["Dep_Name_Lao"].ToString());
+                    auto.Add(dr["Dep_Name_Lao"].ToString());
                 }
                 cmbDeparment.AutoCompleteCustomSource = auto;
                 cmbDeparment.AutoCompleteMode = AutoCompleteMode.Suggest;
@@ -368,10 +368,23 @@ namespace CShard_3cs2_Lad_P2_Salary
             }
         }
 
+        private void dgvStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+               // staff_id = dgvStaff.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
+        }
+
         private void btPrint_Click(object sender, EventArgs e)
         {
-            frmStaffReport report = new frmStaffReport();
+            frmStaffReport report = new frmStaffReport(txtID.Text);
             report.ShowDialog();
+            if (report.Visible == false)
+            {
+                staff_id = "";
+                ClearText();
+            }
         }
 
         private void dgvStaff_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
@@ -519,7 +532,7 @@ namespace CShard_3cs2_Lad_P2_Salary
         {
             try
             {
-                cmd = new SqlCommand("Select Dep_ID From tbDepartment Where Dep_Name=N'" + cmbDeparment.Text + "'", conn);
+                cmd = new SqlCommand("Select Dep_ID From tbDepartment Where Dep_Name_Lao=N'" + cmbDeparment.Text + "'", conn);
                 dr = cmd.ExecuteReader();
                 dr.Read();
                 if (dr.HasRows && dr["Dep_ID"].ToString() != "")

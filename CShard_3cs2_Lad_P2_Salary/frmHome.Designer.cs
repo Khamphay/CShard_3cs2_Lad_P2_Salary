@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,7 +96,7 @@
             this.managementToolStripMenuItem.Image = global::CShard_3cs2_Lad_P2_Salary.Properties.Resources.home_100px;
             this.managementToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.managementToolStripMenuItem.Name = "managementToolStripMenuItem";
-            this.managementToolStripMenuItem.Size = new System.Drawing.Size(79, 32);
+            this.managementToolStripMenuItem.Size = new System.Drawing.Size(95, 32);
             this.managementToolStripMenuItem.Text = "Home";
             // 
             // employeeToolStripMenuItem
@@ -111,14 +111,14 @@
             this.employeeToolStripMenuItem.Image = global::CShard_3cs2_Lad_P2_Salary.Properties.Resources.view_details_100px;
             this.employeeToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(145, 32);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
             this.employeeToolStripMenuItem.Text = "Basic information";
             // 
             // staffToolStripMenuItem
             // 
             this.staffToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.staffToolStripMenuItem.Name = "staffToolStripMenuItem";
-            this.staffToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.staffToolStripMenuItem.Size = new System.Drawing.Size(203, 34);
             this.staffToolStripMenuItem.Text = "Staff";
             this.staffToolStripMenuItem.Click += new System.EventHandler(this.staffToolStripMenuItem_Click);
             // 
@@ -126,7 +126,7 @@
             // 
             this.departmentToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.departmentToolStripMenuItem.Name = "departmentToolStripMenuItem";
-            this.departmentToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.departmentToolStripMenuItem.Size = new System.Drawing.Size(203, 34);
             this.departmentToolStripMenuItem.Text = "Department";
             this.departmentToolStripMenuItem.Click += new System.EventHandler(this.departmentToolStripMenuItem_Click);
             // 
@@ -134,7 +134,7 @@
             // 
             this.positionToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.positionToolStripMenuItem.Name = "positionToolStripMenuItem";
-            this.positionToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.positionToolStripMenuItem.Size = new System.Drawing.Size(203, 34);
             this.positionToolStripMenuItem.Text = "Position";
             this.positionToolStripMenuItem.Click += new System.EventHandler(this.positionToolStripMenuItem_Click);
             // 
@@ -142,7 +142,7 @@
             // 
             this.qualificationToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.qualificationToolStripMenuItem.Name = "qualificationToolStripMenuItem";
-            this.qualificationToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.qualificationToolStripMenuItem.Size = new System.Drawing.Size(203, 34);
             this.qualificationToolStripMenuItem.Text = "Qualification";
             this.qualificationToolStripMenuItem.Click += new System.EventHandler(this.qualificationToolStripMenuItem_Click);
             // 
@@ -156,14 +156,14 @@
             this.salaryToolStripMenuItem.Image = global::CShard_3cs2_Lad_P2_Salary.Properties.Resources.paycheque_100px;
             this.salaryToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.salaryToolStripMenuItem.Name = "salaryToolStripMenuItem";
-            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(81, 32);
+            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(97, 32);
             this.salaryToolStripMenuItem.Text = "Salary";
             // 
             // basicSaralyToolStripMenuItem
             // 
             this.basicSaralyToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.basicSaralyToolStripMenuItem.Name = "basicSaralyToolStripMenuItem";
-            this.basicSaralyToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.basicSaralyToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.basicSaralyToolStripMenuItem.Text = "Basic Saraly";
             this.basicSaralyToolStripMenuItem.Click += new System.EventHandler(this.basicSaralyToolStripMenuItem_Click);
             // 
@@ -171,7 +171,7 @@
             // 
             this.calulateSaralyToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.calulateSaralyToolStripMenuItem.Name = "calulateSaralyToolStripMenuItem";
-            this.calulateSaralyToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.calulateSaralyToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.calulateSaralyToolStripMenuItem.Text = "Calulate Saraly";
             // 
             // userToolStripMenuItem
@@ -184,14 +184,14 @@
             this.userToolStripMenuItem.Image = global::CShard_3cs2_Lad_P2_Salary.Properties.Resources.male_user_100px;
             this.userToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(72, 32);
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(85, 32);
             this.userToolStripMenuItem.Text = "User";
             // 
             // createAccountToolStripMenuItem
             // 
             this.createAccountToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.createAccountToolStripMenuItem.Name = "createAccountToolStripMenuItem";
-            this.createAccountToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.createAccountToolStripMenuItem.Size = new System.Drawing.Size(220, 34);
             this.createAccountToolStripMenuItem.Text = "Create Account";
             this.createAccountToolStripMenuItem.Click += new System.EventHandler(this.createAccountToolStripMenuItem_Click);
             // 
@@ -199,7 +199,7 @@
             // 
             this.userToolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
             this.userToolStripMenuItem1.Name = "userToolStripMenuItem1";
-            this.userToolStripMenuItem1.Size = new System.Drawing.Size(172, 26);
+            this.userToolStripMenuItem1.Size = new System.Drawing.Size(220, 34);
             this.userToolStripMenuItem1.Text = "User";
             // 
             // aboutToolStripMenuItem
@@ -211,14 +211,14 @@
             this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
             this.aboutToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(81, 32);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(96, 32);
             this.aboutToolStripMenuItem.Text = "Attent";
             // 
             // checkInOutToolStripMenuItem
             // 
             this.checkInOutToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.checkInOutToolStripMenuItem.Name = "checkInOutToolStripMenuItem";
-            this.checkInOutToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.checkInOutToolStripMenuItem.Size = new System.Drawing.Size(206, 34);
             this.checkInOutToolStripMenuItem.Text = "Check In-Out";
             this.checkInOutToolStripMenuItem.Click += new System.EventHandler(this.checkInOutToolStripMenuItem_Click);
             // 
@@ -229,7 +229,7 @@
             this.aboautToolStripMenuItem.Image = global::CShard_3cs2_Lad_P2_Salary.Properties.Resources.info_100px;
             this.aboautToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.aboautToolStripMenuItem.Name = "aboautToolStripMenuItem";
-            this.aboautToolStripMenuItem.Size = new System.Drawing.Size(81, 32);
+            this.aboautToolStripMenuItem.Size = new System.Drawing.Size(96, 32);
             this.aboautToolStripMenuItem.Text = "About";
             // 
             // label1
@@ -239,7 +239,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(146, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 44);
+            this.label1.Size = new System.Drawing.Size(229, 57);
             this.label1.TabIndex = 1;
             this.label1.Text = "NL-CLS Salary";
             // 
@@ -255,14 +255,14 @@
             this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvStaff.Location = new System.Drawing.Point(12, 194);
             this.dgvStaff.Name = "dgvStaff";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStaff.RowHeadersWidth = 5;
             this.dgvStaff.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvStaff.RowTemplate.Height = 30;
@@ -277,9 +277,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(589, 126);
+            this.label2.Location = new System.Drawing.Point(589, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 28);
+            this.label2.Size = new System.Drawing.Size(81, 35);
             this.label2.TabIndex = 6;
             this.label2.Text = "Shearch";
             // 
@@ -409,7 +409,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(146, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 28);
+            this.label3.Size = new System.Drawing.Size(171, 35);
             this.label3.TabIndex = 1;
             this.label3.Text = "nl-cls.@gmail.com";
             // 
@@ -420,7 +420,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(147, 125);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 28);
+            this.label4.Size = new System.Drawing.Size(151, 35);
             this.label4.TabIndex = 1;
             this.label4.Text = "www.nl-cls.com";
             // 
@@ -432,7 +432,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(942, 311);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 19);
+            this.label5.Size = new System.Drawing.Size(43, 25);
             this.label5.TabIndex = 9;
             this.label5.Text = "Hello";
             // 
@@ -444,7 +444,7 @@
             this.lbYourName.ForeColor = System.Drawing.Color.White;
             this.lbYourName.Location = new System.Drawing.Point(943, 335);
             this.lbYourName.Name = "lbYourName";
-            this.lbYourName.Size = new System.Drawing.Size(62, 19);
+            this.lbYourName.Size = new System.Drawing.Size(77, 25);
             this.lbYourName.TabIndex = 9;
             this.lbYourName.Text = "Your Name";
             // 
@@ -471,7 +471,7 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(593, 152);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(291, 36);
+            this.textBox1.Size = new System.Drawing.Size(291, 43);
             this.textBox1.TabIndex = 12;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 

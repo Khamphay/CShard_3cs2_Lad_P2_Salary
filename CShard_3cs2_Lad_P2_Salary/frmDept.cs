@@ -23,7 +23,7 @@ namespace CShard_3cs2_Lad_P2_Salary
         SqlCommand cmd;
         DataSet ds = new DataSet();
 
-        string[] colname = { "ລະຫັດ", "ພະແນກ" };
+        string[] colname = { "ລະຫັດ", "ພະແນກ (ພາສາລາວ)", "ພະແນກ (ພາສາອັງກີດ)" };
         private void Show_Data()
         {
             try
@@ -48,9 +48,10 @@ namespace CShard_3cs2_Lad_P2_Salary
         {
             try
             {
-                cmd = new SqlCommand("Insert Into tbDepartment Values(@id, @name)", conn);
+                cmd = new SqlCommand("Insert Into tbDepartment Values(@id, @nameL, @nameE)", conn);
                 cmd.Parameters.AddWithValue("id", txtID.Text);
-                cmd.Parameters.AddWithValue("name", txtName.Text);
+                cmd.Parameters.AddWithValue("nameL", cmbName_Lao.Text);
+                cmd.Parameters.AddWithValue("nameE", cmbName_Eng.Text);
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     Show_Data();
@@ -65,9 +66,10 @@ namespace CShard_3cs2_Lad_P2_Salary
         {
             try
             {
-                cmd = new SqlCommand("Update  tbDepartment Set Dep_Name=@name Where Dep_ID=@id", conn);
+                cmd = new SqlCommand("Update  tbDepartment Set Dep_Name_Lao=@namel, Dep_Name_Eng=@nameE  Where Dep_ID=@id", conn);
                 cmd.Parameters.AddWithValue("id", txtID.Text);
-                cmd.Parameters.AddWithValue("name", txtName.Text);
+                cmd.Parameters.AddWithValue("nameL", cmbName_Lao.Text);
+                cmd.Parameters.AddWithValue("nameE", cmbName_Eng.Text);
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     Show_Data();
@@ -97,6 +99,8 @@ namespace CShard_3cs2_Lad_P2_Salary
         private void ClearText()
         {
             txtID.Clear();
+            cmbName_Eng.ResetText();
+            cmbName_Lao.ResetText();
         }
 
         private void frmDept_Load(object sender, EventArgs e)
@@ -121,7 +125,8 @@ namespace CShard_3cs2_Lad_P2_Salary
             if (e.RowIndex >= 0)
             {
                 txtID.Text= dgvDepartment.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtName.Text= dgvDepartment.Rows[e.RowIndex].Cells[1].Value.ToString();
+                cmbName_Lao.Text= dgvDepartment.Rows[e.RowIndex].Cells[1].Value.ToString();
+                cmbName_Eng.Text= dgvDepartment.Rows[e.RowIndex].Cells[2].Value.ToString();
             }
         }
 
@@ -152,6 +157,55 @@ namespace CShard_3cs2_Lad_P2_Salary
         {
             frmDepartReport report = new frmDepartReport();
             report.ShowDialog();
+        }
+
+        private void cmbName_Eng_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (cmbName_Eng.SelectedIndex == cmbName_Eng.FindString("Administrator"))
+            {
+                cmbName_Lao.ResetText();
+                cmbName_Lao.SelectedText = "ພະແນກບໍລິຫານ";
+            }
+            else if (cmbName_Eng.SelectedIndex == cmbName_Eng.FindString("Finalcial"))
+            {
+                cmbName_Lao.ResetText();
+                cmbName_Lao.SelectedText = "ພະແນກການເງີນ";
+            }
+            else if (cmbName_Eng.SelectedIndex == cmbName_Eng.FindString("IT"))
+            {
+                cmbName_Lao.ResetText();
+                cmbName_Lao.SelectedText = "ພະແນກ ໄອທີ";
+            }
+            else if (cmbName_Eng.SelectedIndex == cmbName_Eng.FindString("Design"))
+            {
+                cmbName_Lao.ResetText();
+                cmbName_Lao.SelectedText = "ພະແນກອອກແບບ";
+            }
+        }
+
+        private void cmbName_Lao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbName_Lao.SelectedIndex == cmbName_Lao.FindString("ພະແນກບໍລິຫານ"))
+            {
+                cmbName_Eng.ResetText();
+                cmbName_Eng.SelectedText = "Administrator";
+            }
+            else if (cmbName_Lao.SelectedIndex == cmbName_Lao.FindString("ພະແນກການເງີນ"))
+            {
+                cmbName_Eng.ResetText();
+                cmbName_Eng.SelectedText = "Finalcial";
+            }
+            else if (cmbName_Lao.SelectedIndex == cmbName_Lao.FindString("ພະແນກ ໄອທີ"))
+            {
+                cmbName_Eng.ResetText();
+                cmbName_Eng.SelectedText = "IT";
+            }
+            else if (cmbName_Lao.SelectedIndex == cmbName_Lao.FindString("ພະແນກອອກແບບ"))
+            {
+                cmbName_Eng.ResetText();
+                cmbName_Eng.SelectedText = "Design";
+            }
         }
     }
 }

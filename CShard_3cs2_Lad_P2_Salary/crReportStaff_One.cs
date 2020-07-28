@@ -16,14 +16,14 @@ namespace CShard_3cs2_Lad_P2_Salary {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class crCheckInOutReport : ReportClass {
+    public class crReportStaff_One : ReportClass {
         
-        public crCheckInOutReport() {
+        public crReportStaff_One() {
         }
         
         public override string ResourceName {
             get {
-                return "crCheckInOutReport.rpt";
+                return "crReportStaff_One.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace CShard_3cs2_Lad_P2_Salary {
         
         public override string FullResourceName {
             get {
-                return "CShard_3cs2_Lad_P2_Salary.crCheckInOutReport.rpt";
+                return "CShard_3cs2_Lad_P2_Salary.crReportStaff_One.rpt";
             }
             set {
                 // Do nothing
@@ -114,9 +114,9 @@ namespace CShard_3cs2_Lad_P2_Salary {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrCheckInOutReport : Component, ICachedReport {
+    public class CachedcrReportStaff_One : Component, ICachedReport {
         
-        public CachedcrCheckInOutReport() {
+        public CachedcrReportStaff_One() {
         }
         
         [Browsable(false)]
@@ -153,7 +153,7 @@ namespace CShard_3cs2_Lad_P2_Salary {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crCheckInOutReport rpt = new crCheckInOutReport();
+            crReportStaff_One rpt = new crReportStaff_One();
             rpt.Site = this.Site;
             return rpt;
         }

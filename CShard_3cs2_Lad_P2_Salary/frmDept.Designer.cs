@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDept));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -47,6 +46,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.cmbName_Eng = new System.Windows.Forms.ComboBox();
+            this.cmbName_Lao = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
@@ -55,10 +57,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbName_Lao);
+            this.groupBox1.Controls.Add(this.cmbName_Eng);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.txtID);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(23, 88);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -73,7 +77,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 132);
+            this.label2.Location = new System.Drawing.Point(50, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(202, 28);
             this.label2.TabIndex = 1;
@@ -83,27 +87,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 60);
+            this.label1.Location = new System.Drawing.Point(50, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Department ID";
             // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(53, 160);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(277, 36);
-            this.txtName.TabIndex = 1;
-            this.txtName.Enter += new System.EventHandler(this.txtID_Enter);
-            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtID_KeyDown);
-            // 
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(53, 88);
+            this.txtID.Location = new System.Drawing.Point(51, 58);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(277, 36);
@@ -239,10 +232,10 @@
             this.dgvDepartment.ReadOnly = true;
             this.dgvDepartment.RowHeadersWidth = 5;
             this.dgvDepartment.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvDepartment.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvDepartment.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDepartment.RowTemplate.Height = 30;
             this.dgvDepartment.RowTemplate.ReadOnly = true;
             this.dgvDepartment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -282,6 +275,44 @@
             this.label6.Size = new System.Drawing.Size(134, 31);
             this.label6.TabIndex = 11;
             this.label6.Text = "NL-CLS Salary";
+            // 
+            // cmbName_Eng
+            // 
+            this.cmbName_Eng.FormattingEnabled = true;
+            this.cmbName_Eng.Items.AddRange(new object[] {
+            "Administrator",
+            "Finalcial",
+            "IT",
+            "Design"});
+            this.cmbName_Eng.Location = new System.Drawing.Point(51, 133);
+            this.cmbName_Eng.Name = "cmbName_Eng";
+            this.cmbName_Eng.Size = new System.Drawing.Size(279, 36);
+            this.cmbName_Eng.TabIndex = 2;
+            this.cmbName_Eng.SelectedIndexChanged += new System.EventHandler(this.cmbName_Eng_SelectedIndexChanged);
+            // 
+            // cmbName_Lao
+            // 
+            this.cmbName_Lao.FormattingEnabled = true;
+            this.cmbName_Lao.Items.AddRange(new object[] {
+            "ພະແນກບໍລິຫານ",
+            "ພະແນກການເງີນ",
+            "ພະແນກ ໄອທີ",
+            "ພະແນກອອກແບບ"});
+            this.cmbName_Lao.Location = new System.Drawing.Point(51, 201);
+            this.cmbName_Lao.Name = "cmbName_Lao";
+            this.cmbName_Lao.Size = new System.Drawing.Size(279, 36);
+            this.cmbName_Lao.TabIndex = 2;
+            this.cmbName_Lao.SelectedIndexChanged += new System.EventHandler(this.cmbName_Lao_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Lao_Ketmany2", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(50, 176);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(177, 28);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Department Name of Lao";
             // 
             // frmDept
             // 
@@ -327,10 +358,12 @@
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView dgvDepartment;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btPrint;
+        private System.Windows.Forms.ComboBox cmbName_Lao;
+        private System.Windows.Forms.ComboBox cmbName_Eng;
+        private System.Windows.Forms.Label label7;
     }
 }

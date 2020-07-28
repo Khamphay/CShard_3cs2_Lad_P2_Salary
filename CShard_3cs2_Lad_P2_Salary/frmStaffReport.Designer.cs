@@ -29,42 +29,32 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.crStaffReport1 = new CShard_3cs2_Lad_P2_Salary.crStaffReport();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.crStaffReport_Person1 = new CShard_3cs2_Lad_P2_Salary.crStaffReport_Person();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
             // 
-            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.ActiveViewIndex = -1;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(221, 0);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.crStaffReport_Person1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(693, 633);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1754, 1103);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(221, 633);
-            this.panel1.TabIndex = 1;
-            // 
             // frmStaffReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 633);
+            this.ClientSize = new System.Drawing.Size(1403, 882);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmStaffReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmStaffReport";
+            this.Load += new System.EventHandler(this.frmStaffReport_Load);
             this.ResumeLayout(false);
 
         }
@@ -72,8 +62,5 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private crStaffReport crStaffReport1;
-        private crStaffReport_Person crStaffReport_Person1;
-        private System.Windows.Forms.Panel panel1;
     }
 }
