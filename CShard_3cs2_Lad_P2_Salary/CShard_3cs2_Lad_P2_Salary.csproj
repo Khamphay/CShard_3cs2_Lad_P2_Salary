@@ -41,6 +41,9 @@
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\Information\For Desktop App\VB Net\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Message">
+      <HintPath>..\..\Message.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,55 +61,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicSalary.cs">
+    <Compile Include="FormShowData\BasicSalary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BasicSalary.Designer.cs">
+    <Compile Include="FormShowData\BasicSalary.Designer.cs">
       <DependentUpon>BasicSalary.cs</DependentUpon>
     </Compile>
-    <Compile Include="crBasiSalaryReport.cs">
+    <Compile Include="Report\crBasiSalaryReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crBasiSalaryReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crCheckInOutReport.cs">
+    <Compile Include="Report\crCheckInOutReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crCheckInOutReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crDepartReport.cs">
+    <Compile Include="Report\crDepartReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crDepartReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crPositionReport.cs">
+    <Compile Include="Report\crPositionReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crPositionReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crQuelifiReport.cs">
+    <Compile Include="Report\crQuelifiReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crQuelifiReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crReportStaff_One.cs">
+    <Compile Include="Report\crReportStaff_One.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crReportStaff_One.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crStaffReport.cs">
+    <Compile Include="Report\crStaffReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crStaffReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="crStaffReport_Person.cs">
+    <Compile Include="Report\crStaffReport_Person.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crStaffReport_Person.rpt</DependentUpon>
@@ -120,169 +123,170 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsReport.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="FormShowData\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="FormShowData\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBasiSalary.cs">
+    <Compile Include="FormReport\frmBasiSalary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBasiSalary.Designer.cs">
+    <Compile Include="FormReport\frmBasiSalary.Designer.cs">
       <DependentUpon>frmBasiSalary.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCheckInOutReport.cs">
+    <Compile Include="FormReport\frmCheckInOutReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCheckInOutReport.Designer.cs">
+    <Compile Include="FormReport\frmCheckInOutReport.Designer.cs">
       <DependentUpon>frmCheckInOutReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCheck_In_Out.cs">
+    <Compile Include="FormShowData\frmCheck_In_Out.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCheck_In_Out.Designer.cs">
+    <Compile Include="FormShowData\frmCheck_In_Out.Designer.cs">
       <DependentUpon>frmCheck_In_Out.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDepartReport.cs">
+    <Compile Include="FormReport\frmDepartReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDepartReport.Designer.cs">
+    <Compile Include="FormReport\frmDepartReport.Designer.cs">
       <DependentUpon>frmDepartReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPositionReport.cs">
+    <Compile Include="FormReport\frmPositionReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPositionReport.Designer.cs">
+    <Compile Include="FormReport\frmPositionReport.Designer.cs">
       <DependentUpon>frmPositionReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQualification.cs">
+    <Compile Include="FormShowData\frmQualification.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQualification.Designer.cs">
+    <Compile Include="FormShowData\frmQualification.Designer.cs">
       <DependentUpon>frmQualification.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDept.cs">
+    <Compile Include="FormShowData\frmDept.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDept.Designer.cs">
+    <Compile Include="FormShowData\frmDept.Designer.cs">
       <DependentUpon>frmDept.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHome.cs">
+    <Compile Include="FormShowData\frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHome.Designer.cs">
+    <Compile Include="FormShowData\frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPosition.cs">
+    <Compile Include="FormShowData\frmPosition.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPosition.Designer.cs">
+    <Compile Include="FormShowData\frmPosition.Designer.cs">
       <DependentUpon>frmPosition.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuelificationReport.cs">
+    <Compile Include="FormReport\frmQuelificationReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuelificationReport.Designer.cs">
+    <Compile Include="FormReport\frmQuelificationReport.Designer.cs">
       <DependentUpon>frmQuelificationReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStaff.cs">
+    <Compile Include="FormShowData\frmStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStaff.Designer.cs">
+    <Compile Include="FormShowData\frmStaff.Designer.cs">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCreateUser.cs">
+    <Compile Include="FormShowData\frmCreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCreateUser.Designer.cs">
+    <Compile Include="FormShowData\frmCreateUser.Designer.cs">
       <DependentUpon>frmCreateUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStaffReport.cs">
+    <Compile Include="FormReport\frmStaffReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStaffReport.Designer.cs">
+    <Compile Include="FormReport\frmStaffReport.Designer.cs">
       <DependentUpon>frmStaffReport.cs</DependentUpon>
     </Compile>
     <Compile Include="KeyBord.cs" />
     <Compile Include="MyConnect.cs" />
+    <Compile Include="MyModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BasicSalary.resx">
+    <EmbeddedResource Include="FormShowData\BasicSalary.resx">
       <DependentUpon>BasicSalary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="crBasiSalaryReport.rpt">
+    <EmbeddedResource Include="Report\crBasiSalaryReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crBasiSalaryReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="crCheckInOutReport.rpt">
+    <EmbeddedResource Include="Report\crCheckInOutReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crCheckInOutReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="crDepartReport.rpt">
+    <EmbeddedResource Include="Report\crDepartReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crDepartReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="crPositionReport.rpt">
+    <EmbeddedResource Include="Report\crPositionReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crPositionReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="crQuelifiReport.rpt">
+    <EmbeddedResource Include="Report\crQuelifiReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crQuelifiReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="crReportStaff_One.rpt">
+    <EmbeddedResource Include="Report\crReportStaff_One.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crReportStaff_One.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="crStaffReport.rpt">
+    <EmbeddedResource Include="Report\crStaffReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crStaffReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="crStaffReport_Person.rpt">
+    <EmbeddedResource Include="Report\crStaffReport_Person.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crStaffReport_Person.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="FormShowData\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBasiSalary.resx">
+    <EmbeddedResource Include="FormReport\frmBasiSalary.resx">
       <DependentUpon>frmBasiSalary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCheckInOutReport.resx">
+    <EmbeddedResource Include="FormReport\frmCheckInOutReport.resx">
       <DependentUpon>frmCheckInOutReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCheck_In_Out.resx">
+    <EmbeddedResource Include="FormShowData\frmCheck_In_Out.resx">
       <DependentUpon>frmCheck_In_Out.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDepartReport.resx">
+    <EmbeddedResource Include="FormReport\frmDepartReport.resx">
       <DependentUpon>frmDepartReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPositionReport.resx">
+    <EmbeddedResource Include="FormReport\frmPositionReport.resx">
       <DependentUpon>frmPositionReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQualification.resx">
+    <EmbeddedResource Include="FormShowData\frmQualification.resx">
       <DependentUpon>frmQualification.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDept.resx">
+    <EmbeddedResource Include="FormShowData\frmDept.resx">
       <DependentUpon>frmDept.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHome.resx">
+    <EmbeddedResource Include="FormShowData\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPosition.resx">
+    <EmbeddedResource Include="FormShowData\frmPosition.resx">
       <DependentUpon>frmPosition.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuelificationReport.resx">
+    <EmbeddedResource Include="FormReport\frmQuelificationReport.resx">
       <DependentUpon>frmQuelificationReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStaff.resx">
+    <EmbeddedResource Include="FormShowData\frmStaff.resx">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCreateUser.resx">
+    <EmbeddedResource Include="FormShowData\frmCreateUser.resx">
       <DependentUpon>frmCreateUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStaffReport.resx">
+    <EmbeddedResource Include="FormReport\frmStaffReport.resx">
       <DependentUpon>frmStaffReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
