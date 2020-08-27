@@ -27,6 +27,30 @@ namespace CShard_3cs2_Lad_P2_Salary
         DataTable table;
         string posi_id = "";
         AutoCompleteStringCollection auto = new AutoCompleteStringCollection();
+        int maxid = 0;
+
+        private void MaxID()
+        {
+            try
+            {
+                cmd = new SqlCommand("Select Max(Cre_ID) as mid From tbCreate_Account", con);
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    dr.Read();
+                    maxid = int.Parse(dr["mid"].ToString())+1;
+                    txtID.Text = maxid.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດສະແດງຄ່າໃຫຍ່ສຸດໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ເກີດບັນຫາ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                dr.Close();
+            }
+        }
 
         private void LoadStaffID()
         {
@@ -81,44 +105,53 @@ namespace CShard_3cs2_Lad_P2_Salary
 
         private void LoaPosition()
         {
-            try
-            {
-                da = new SqlDataAdapter("Select Po_Name_Eng, Po_Name_Lao From tbPosition", con);
-                table = new DataTable();
-                da.Fill(table);
-                if (table.Rows.Count>0)
-                {
-                    for (int i=0;i<table.Rows.Count;i++)
-                    {
-                        cmbNameEngP.Items.Add(table.Rows[i][0].ToString());
-                        cmbNameLaoP.Items.Add(table.Rows[i][1].ToString());
-                    }
-                }
-            }catch (Exception ex)
-            {
-                MyMessageBox.ShowMssg("ບໍ່ສາມາດສະແດງຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ເກີດບັນຫາ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //try
+            //{
+            //    da = new SqlDataAdapter("Select Po_Name_Eng, Po_Name_Lao From tbPosition", con);
+            //    table = new DataTable();
+            //    da.Fill(table);
+            //    if (table.Rows.Count>0)
+            //    {
+            //        for (int i=0;i<table.Rows.Count;i++)
+            //        {
+            //            cmbNameEngP.Items.Add(table.Rows[i][0].ToString());
+            //            cmbNameLaoP.Items.Add(table.Rows[i][1].ToString());
+            //        }
+            //    }
+            //}catch (Exception ex)
+            //{
+            //    MyMessageBox.ShowMssg("ບໍ່ສາມາດສະແດງຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ເກີດບັນຫາ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
         private void Save()
         {
-            try
+            if(txtUser.Text!="" && txtRepass.Text!="" && txtName.Text != "")
             {
-                cmd = new SqlCommand("Insert Into tbCreate_Account Values(@id, @stid, @Posi, @user, @pass)", con);
-                cmd.Parameters.AddWithValue("id", txtID.Text);
-                cmd.Parameters.AddWithValue("stid", txtstaff_id.Text);
-                cmd.Parameters.AddWithValue("Posi", posi_id);
-                cmd.Parameters.AddWithValue("user", txtUser.Text);
-                cmd.Parameters.AddWithValue("pass", txtNewpass.Text);
-                if (cmd.ExecuteNonQuery() == 1)
+                try
                 {
-                    MyMessageBox.ShowMssg("ບັນທືກຂໍ້ມູນສຳເລັດແລ້ວ", "ບັນທືກ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearText();
+                    cmd = new SqlCommand("Insert Into tbCreate_Account Values(@id, @stid, @Posi, @user, @pass)", con);
+                    cmd.Parameters.AddWithValue("id", txtID.Text);
+                    cmd.Parameters.AddWithValue("stid", txtstaff_id.Text);
+                    cmd.Parameters.AddWithValue("Posi", posi_id);
+                    cmd.Parameters.AddWithValue("user", txtUser.Text);
+                    cmd.Parameters.AddWithValue("pass", txtNewpass.Text);
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        MyMessageBox.ShowMssg("ບັນທືກຂໍ້ມູນສຳເລັດແລ້ວ", "ບັນທືກ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearText();
+                        MaxID();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MyMessageBox.ShowMssg("ບໍ່ສາມາດບັນທືກຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ເກີດບັນຫາ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MyMessageBox.ShowMssg("ບໍ່ສາມາດບັນທືກຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ເກີດບັນຫາ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMssg("ປ້ອນຂໍ້ມູນໃຫ້ຄົບຕາມທີ່ກຳນົດ ແລ້ວລອງໃໝ່ອີກຄັ້ງ","ປ້ອນຂໍ້ມູນ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+           
         }
         private void ClearText()
         {
@@ -128,8 +161,8 @@ namespace CShard_3cs2_Lad_P2_Salary
             txtRepass.Clear();
             posi_id = "";
             txtUser.Clear();
-            cmbNameEngP.ResetText();
-            cmbNameLaoP.ResetText();
+            txtPo_Eng.Clear();
+            txtPo_Lao.Clear();
         }
 
         private void brexit_Click(object sender, EventArgs e)
@@ -149,68 +182,22 @@ namespace CShard_3cs2_Lad_P2_Salary
         private void frmUser_Load(object sender, EventArgs e)
         {
             KeyBord.getKeyBord();
-            LoaPosition();
+            //LoaPosition();
+            MaxID();
             LoadStaffID();
             LoadStaffName();
         }
 
-        private void cmbPosition_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbNameEngP.SelectedIndex == cmbNameEngP.FindString("Administrator"))
-            {
-                cmbNameLaoP.ResetText();
-                cmbNameLaoP.SelectedText = "ປະທານ";
-            }
-            else if (cmbNameEngP.SelectedIndex == cmbNameEngP.FindString("Vice Administrator"))
-            {
-                cmbNameLaoP.ResetText();
-                cmbNameLaoP.SelectedText = "ຜູ້ບໍລິຫານ";
-            }
-            else if (cmbNameEngP.SelectedIndex == cmbNameEngP.FindString("Manager"))
-            {
-                cmbNameLaoP.ResetText();
-                cmbNameLaoP.SelectedText = "ຫົວໜັາພະແນກ";
-            }
-            else if (cmbNameEngP.SelectedIndex == cmbNameEngP.FindString("Head of Department"))
-            {
-                cmbNameLaoP.ResetText();
-                cmbNameLaoP.SelectedText = "ຫົວໜ້າພະແນກ";
-            }
-            else if (cmbNameEngP.SelectedIndex == cmbNameEngP.FindString("Deputy of Department"))
-            {
-                cmbNameLaoP.ResetText();
-                cmbNameLaoP.SelectedText = "ຮອງພະແນກ";
-            }
-            else if (cmbNameEngP.SelectedIndex == cmbNameEngP.FindString("Employee"))
-            {
-                cmbNameLaoP.ResetText();
-                cmbNameLaoP.SelectedText = "ພະນັກງານ";
-            }
-
-
-            try
-            {
-                cmd = new SqlCommand("Select Po_ID From tbPosition Where Po_Name_Eng=N'" + cmbNameEngP.Text + "'", con);
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                if (dr.HasRows && dr["Po_ID"].ToString() != "")
-                {
-                    posi_id=dr["Po_ID"].ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MyMessageBox.ShowMssg("ບໍ່ສາມາດສະແດງຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ເກີດບັນຫາ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                dr.Close();
-            }
-        }
-
         private void btnewuser_Click(object sender, EventArgs e)
         {
-            Save();
+            if (txtRepass.Text == txtNewpass.Text)
+            {
+                Save();
+            }
+            else
+            {
+                MyMessageBox.ShowMssg("ລະຫັດບໍ່ຄືກັນ ກະລຸນາປ້ອນໃຫມ່", "ເກີດບັນຫາ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void txtID_Enter(object sender, EventArgs e)
@@ -226,55 +213,35 @@ namespace CShard_3cs2_Lad_P2_Salary
             }
         }
 
-        private void cmbNameLaoP_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ປະທານ"))
-            {
-                cmbNameEngP.ResetText();
-                cmbNameEngP.SelectedText = "Administrator";
-            }
-            else if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ຮອງປະທານ"))
-            {
-                cmbNameEngP.ResetText();
-                cmbNameEngP.SelectedText = "Vice Administrator";
-            }
-            else if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ພະແນກບໍລິຫານ"))
-            {
-                cmbNameEngP.ResetText();
-                cmbNameEngP.SelectedText = "Aministive";
-            }
-            else if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ຜູ້ບໍລິຫານ"))
-            {
-                cmbNameEngP.ResetText();
-                cmbNameEngP.SelectedText = "Manager";
-            }
-            else if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ຫົວໜ້າພະແນກ"))
-            {
-                cmbNameEngP.ResetText();
-                cmbNameEngP.SelectedText = "Head of Department";
-            }
-            else if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ຮອງພະແນກ"))
-            {
-                cmbNameEngP.ResetText();
-                cmbNameEngP.SelectedText = "Deputy of Department";
-            }
-            else if (cmbNameLaoP.SelectedIndex == cmbNameLaoP.FindString("ພະນັກງານ"))
-            {
-                cmbNameEngP.ResetText();
-                cmbNameEngP.SelectedText = "Employee";
-            }
-        }
 
         private void txtstaff_id_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                table = new DataTable();
-                da = new SqlDataAdapter("Select Name_Lao From tbStaff Where St_ID=N'" + txtstaff_id.Text + "'", con);
-                da.Fill(table);
-                if (table.Rows.Count > 0)
+                da = new SqlDataAdapter("Select * From tbCreate_Account Where staff=N'" + txtstaff_id.Text + "'", con);
+                DataTable t = new DataTable();
+                da.Fill(t);
+                if (t.Rows.Count<=0)
                 {
-                  txtName.Text= table.Rows[0]["Name_Lao"].ToString();
+                    table = new DataTable();
+                    da = new SqlDataAdapter("Select tbStaff.Name_Lao, tbPosition.Po_Name_Eng, tbPosition.Po_Name_Lao From tbStaff Inner Join tbPosition ON tbStaff.Po_ID=tbPosition.Po_ID Where tbStaff.St_ID=N'" + txtstaff_id.Text + "'", con);
+                    da.Fill(table);
+
+                    if (table.Rows.Count > 0 && table.Rows[0][0].ToString() != "")
+                    {
+                        if (txtName.Text == "")
+                        {
+                            txtName.Text = table.Rows[0][0].ToString();
+                        }
+
+                        txtPo_Eng.Text = table.Rows[0][1].ToString();
+                        txtPo_Lao.Text = table.Rows[0][2].ToString();
+                    }
+                }
+                else
+                {
+                    txtstaff_id.Clear();
+                    MyMessageBox.ShowMssg("ມີບັນຊີນີ້ຢຸ່ໃນລະບົບແລ້ວ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -287,18 +254,58 @@ namespace CShard_3cs2_Lad_P2_Salary
         {
             try
             {
-                table = new DataTable();
-                da = new SqlDataAdapter("Select St_ID From tbStaff Where Name_Lao=N'" + txtName.Text + "' OR Name_Eng=N'" + txtName.Text + "'", con);
-                da.Fill(table);
-                if (table.Rows.Count>0)
+                if (txtstaff_id.Text == "")
                 {
-                    txtstaff_id.Text = table.Rows[0]["St_ID"].ToString();
+                    table = new DataTable();
+                    da = new SqlDataAdapter("Select St_ID From tbStaff Where Name_Lao=N'" + txtName.Text + "' OR Name_Eng=N'" + txtName.Text + "'", con);
+                    da.Fill(table);
+                    if (table.Rows.Count > 0)
+                    {
+                        txtstaff_id.Text = table.Rows[0]["St_ID"].ToString();
+                    }
                 }
             }
             catch (Exception ex)
             {
                 MyMessageBox.ShowMssg("ບໍ່ສາມາດສະແດງຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ເກີດບັນຫາ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtRepass_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtPo_Eng_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                cmd = new SqlCommand("Select Po_ID From tbPosition Where Po_Name_Eng=N'" + txtPo_Eng.Text + "'", con);
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows && dr["Po_ID"].ToString() != "")
+                {
+                    posi_id = dr["Po_ID"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MyMessageBox.ShowMssg("ບໍ່ສາມາດສະແດງຂໍ້ມູນໄດ້ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "ເກີດບັນຫາ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                dr.Close();
+            }
+        }
+
+        private void txtPo_Lao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

@@ -31,8 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.cmbNameLaoP = new System.Windows.Forms.ComboBox();
-            this.cmbNameEngP = new System.Windows.Forms.ComboBox();
             this.txtRepass = new System.Windows.Forms.TextBox();
             this.txtNewpass = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
@@ -48,6 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnewuser = new System.Windows.Forms.Button();
             this.brexit = new System.Windows.Forms.Button();
+            this.txtPo_Eng = new System.Windows.Forms.TextBox();
+            this.txtPo_Lao = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,9 +64,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtPo_Lao);
+            this.groupBox1.Controls.Add(this.txtPo_Eng);
             this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Controls.Add(this.cmbNameLaoP);
-            this.groupBox1.Controls.Add(this.cmbNameEngP);
             this.groupBox1.Controls.Add(this.txtRepass);
             this.groupBox1.Controls.Add(this.txtNewpass);
             this.groupBox1.Controls.Add(this.txtUser);
@@ -101,30 +101,6 @@
             this.txtName.TabIndex = 7;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
-            // cmbNameLaoP
-            // 
-            this.cmbNameLaoP.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
-            this.cmbNameLaoP.FormattingEnabled = true;
-            this.cmbNameLaoP.Location = new System.Drawing.Point(285, 59);
-            this.cmbNameLaoP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbNameLaoP.Name = "cmbNameLaoP";
-            this.cmbNameLaoP.Size = new System.Drawing.Size(227, 36);
-            this.cmbNameLaoP.TabIndex = 3;
-            this.cmbNameLaoP.SelectedIndexChanged += new System.EventHandler(this.cmbNameLaoP_SelectedIndexChanged);
-            this.cmbNameLaoP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Enter);
-            // 
-            // cmbNameEngP
-            // 
-            this.cmbNameEngP.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
-            this.cmbNameEngP.FormattingEnabled = true;
-            this.cmbNameEngP.Location = new System.Drawing.Point(38, 285);
-            this.cmbNameEngP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbNameEngP.Name = "cmbNameEngP";
-            this.cmbNameEngP.Size = new System.Drawing.Size(227, 36);
-            this.cmbNameEngP.TabIndex = 2;
-            this.cmbNameEngP.SelectedIndexChanged += new System.EventHandler(this.cmbPosition_SelectedIndexChanged);
-            this.cmbNameEngP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Enter);
-            // 
             // txtRepass
             // 
             this.txtRepass.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
@@ -133,6 +109,8 @@
             this.txtRepass.Name = "txtRepass";
             this.txtRepass.Size = new System.Drawing.Size(227, 36);
             this.txtRepass.TabIndex = 6;
+            this.txtRepass.UseSystemPasswordChar = true;
+            this.txtRepass.TextChanged += new System.EventHandler(this.txtRepass_TextChanged);
             this.txtRepass.Enter += new System.EventHandler(this.txtID_Enter);
             this.txtRepass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Enter);
             // 
@@ -144,6 +122,7 @@
             this.txtNewpass.Name = "txtNewpass";
             this.txtNewpass.Size = new System.Drawing.Size(227, 36);
             this.txtNewpass.TabIndex = 5;
+            this.txtNewpass.UseSystemPasswordChar = true;
             this.txtNewpass.Enter += new System.EventHandler(this.txtID_Enter);
             this.txtNewpass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Enter);
             // 
@@ -177,9 +156,10 @@
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(227, 36);
-            this.txtID.TabIndex = 0;
+            this.txtID.TabIndex = 55;
             this.txtID.Enter += new System.EventHandler(this.txtID_Enter);
             this.txtID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Enter);
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // label8
             // 
@@ -299,6 +279,27 @@
             this.brexit.UseVisualStyleBackColor = true;
             this.brexit.Click += new System.EventHandler(this.brexit_Click);
             // 
+            // txtPo_Eng
+            // 
+            this.txtPo_Eng.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.txtPo_Eng.Location = new System.Drawing.Point(38, 285);
+            this.txtPo_Eng.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPo_Eng.Name = "txtPo_Eng";
+            this.txtPo_Eng.Size = new System.Drawing.Size(227, 36);
+            this.txtPo_Eng.TabIndex = 8;
+            this.txtPo_Eng.TextChanged += new System.EventHandler(this.txtPo_Eng_TextChanged);
+            this.txtPo_Eng.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPo_Lao_KeyPress);
+            // 
+            // txtPo_Lao
+            // 
+            this.txtPo_Lao.Font = new System.Drawing.Font("Lao_Ketmany2", 12F);
+            this.txtPo_Lao.Location = new System.Drawing.Point(290, 59);
+            this.txtPo_Lao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPo_Lao.Name = "txtPo_Lao";
+            this.txtPo_Lao.Size = new System.Drawing.Size(227, 36);
+            this.txtPo_Lao.TabIndex = 9;
+            this.txtPo_Lao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPo_Lao_KeyPress);
+            // 
             // frmCreateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -339,10 +340,10 @@
         private System.Windows.Forms.TextBox txtRepass;
         private System.Windows.Forms.Button btnewuser;
         private System.Windows.Forms.Button brexit;
-        private System.Windows.Forms.ComboBox cmbNameEngP;
-        private System.Windows.Forms.ComboBox cmbNameLaoP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtPo_Lao;
+        private System.Windows.Forms.TextBox txtPo_Eng;
     }
 }

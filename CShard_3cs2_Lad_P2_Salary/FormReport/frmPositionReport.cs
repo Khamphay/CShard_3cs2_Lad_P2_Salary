@@ -28,6 +28,11 @@ namespace CShard_3cs2_Lad_P2_Salary
 
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void frmPositionReport_Load(object sender, EventArgs e)
+        {
             //ReportDocument rd;
             //ParameterFieldDefinition fieldDefinition;
             //ParameterFieldDefinitions fieldDefinitions;
